@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+
+<body>
+<h3>지역변수와 전역변수</h3>
+<hr>
+<script>
+var x=100; //전역변수
+function f() {
+	var x=1;//지역변수
+	
+	document.write("지역변수 x=" + x);
+	document.write("<br>");
+	document.write("전역변수 x=" + this.x); //this는 전역변수 x를 의미함
+	document.write("<br>");
+}
+
+for(var i=0; i<10; i++) {
+f();
+}
+
+</script>
+</body>
+</html>
