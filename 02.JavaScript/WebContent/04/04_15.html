@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script>
+//미리 로딩해둘 이미지 이름 배열
+
+var files=["img/Penguins.png",
+	       "img/Lighthouse.png",
+	       "img/Chrysanthemum.png",
+	       "img/Desert.png",
+	       "img/Hydrangeas.png",
+	       "img/Jellyfish.png",
+	       "img/Koala.png",
+	       "img/Tulips.png"];
+
+var imgs = new Array();
+for(var i=0; i<files.length;i++) {
+	imgs[i] = new Image();
+	imgs[i].src = files[i];
+}
+
+//다음 이미지 출력
+var next = 1;
+function change(img){
+	img.src = imgs[next].src;
+	next++;
+	next %= imgs.length; //계속 반복해서 이미지 출력 next = next % ims.length
+}
+</script>
+</head>
+
+<body>
+<h3>new image()로 이미지 로딩</h3>
+<hr>
+이미지를 클릭하면 다음 이미지를 보여줍니다. <p>
+<img style="border:20px ridge wheat"
+     src="img/Penguins.png" alt="." width="500" height="500"
+     onclick="change(this)">
+</body>
+</html>
