@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script src="http://code.jquery.com/jquery.js"></script>
+<script>
+
+$(document).ready(function() {
+	//5초 후에 코드를 실행
+	setTimeout(function(){
+		//select 태그의 자식인 option 태그 중 선택 된 값을 불러옴
+		var value = $('select > option:selected').val();
+		//출력합니다.
+		alert(value);
+	},5000);
+});
+
+</script>
+
+</head>
+<body>
+<div>
+
+<select>
+<option>Apple</option>
+<option>Bag</option>
+<option>Cat</option>
+<option>Dog</option>
+<option>Elephant</option>
+
+</select>
+
+
+
+</div>
+</body>
+</html>
