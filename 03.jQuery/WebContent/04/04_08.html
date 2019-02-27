@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+
+<script src="http://code.jquery.com/jquery.js"></script>
+<Script>
+$(document).ready(function () {
+	//이벤트 연결
+	$('h1').click(function() {
+		$(this).html(function(index, html) {
+			return html + '★';
+		});
+	});
+
+	$('h1').click(function(event, data1, data2) {
+			alert(data1 + ':' + data2); //출력된 위치가 alert 창에 나옴
+	});
+		
+	
+	$('h1').eq(1).trigger('click',[273, 52]); //273, 52 위치에 마우스가 클릭이 되서
+	                                        // 별이 출력이됨
+	
+});
+	
+</Script>
+</head>
+
+<body>
+<h1>Start: </h1>
+<h1>Start: </h1>
+</body>
+</html>

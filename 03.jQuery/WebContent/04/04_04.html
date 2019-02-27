@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<style>
+* {margin:0px; padding:0px}
+div{
+margin:5px; padding:3px;
+border-width:3px;
+border-style:solid;
+border-color:Black;
+border-radius:10px;
+}
+</style>
+<script src="http://code.jquery.com/jquery.js"></script>
+<Script>
+$(document).ready(function () {
+	//이벤트 연결
+	$('div').click(function() {
+		var header = $('h1', this).text(); //this를 쓰면 현재 클릭한 text만 선택됨
+		var paragraph = $('p', this).text();
+		//출력
+		alert(header + '\n' + paragraph);
+	});
+});
+</Script>
+<body>
+<div>
+<h1>Header 1</h1>
+<p>Paragraph</p>
+</div>
+<div>
+<h1>Header 2</h1>
+<p>Paragraph</p>
+</div>
+<div>
+<h1>Header 3</h1>
+<p>Paragraph</p>
+</div>
+</body>
+</html>

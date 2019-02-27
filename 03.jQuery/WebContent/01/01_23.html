@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script src="http://code.jquery.com/jquery.js"></script>
+<script>
+$(document).ready(function() {
+	//변수를 선언
+	var object = { name: 'RintIanTta'};
+
+	$.extend(object, {
+		gender: 'Male',
+	    part: 'Second Guitar'
+	});
+	
+	//출력 합니다.
+	
+	var output = '';
+	$.each(object, function (key, item) {
+		output += key + ': ' + item + '\n';
+		
+	});
+	alert(output);
+	document.body.innerHTML += output;
+});
+</script>
+</head>
+<body>
+
+</body>
+</html>

@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script src="http://code.jquery.com/jquery.js"></script>
+<script>
+$(document).ready(function(){
+	$('h1').eq(0).css({backgroundColor: 'Orange', color: 'blue'});
+	$('h1').eq(-1).css('background', 'pink'); // 끝에서 부터 선택 하려면 음수로 선택
+
+});
+</script>
+</head>
+<body>
+<h1>Header-0</h1>
+<h1>Header-1</h1>
+<h1>Header-2</h1>
+<h1>Header-3</h1>
+
+</body>
+</html>

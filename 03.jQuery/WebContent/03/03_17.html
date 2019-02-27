@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script src="http://code.jquery.com/jquery.js"></script>
+<script>
+$(document).ready(function () {
+	$('div').html(function(index) {
+		return '<h1>Header~' + index + '</h1>';
+	});//웹브라우저 F12 개발자 에서 확인 가능
+});
+</script>
+</head>
+
+<body>
+<div></div>
+<div></div>
+<div></div>
+</body>
+</html>

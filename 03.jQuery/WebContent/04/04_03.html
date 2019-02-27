@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style>
+.reverse {
+background: Black;
+color: White;
+}
+</style>
+                           
+<script src="http://code.jquery.com/jquery-1.7.js"></script>
+<script>
+$(document).ready(function(){
+	$('h1').click(function() {
+		$(this).html("CLICK");
+		alert('이벤트가 발생했습니다.');
+		//이벤트를 제거합니다.
+		$(this).unbind();//이벤트가 한 번만 발생
+	});
+});
+</script>
+
+</head>
+<body>
+<h1>Header~0</h1>
+<h1>Header~1</h1>
+<h1>Header~2</h1>
+</body>
+</html>

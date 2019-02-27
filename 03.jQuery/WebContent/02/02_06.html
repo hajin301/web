@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script src="http://code.jquery.com/jquery.js"></script>
+<script>
+$(document).ready(function(){
+	$('h1').css({backgroundColor: 'Orange', color: 'blue'})
+	.filter(':even').css('color', 'yellow'). end() //even 필터링 끝났다는 의미로 end()꼭 써줘야함
+	.filter(':odd').css('color', 'red');
+	});
+</script>
+</head>
+<body>
+<h1>Header-0</h1>
+<h1>Header-1</h1>
+<h1>Header-2</h1>
+<h1>Header-3</h1>
+
+</body>
+</html>
