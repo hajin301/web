@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body> 
+<script> // body에다가 script를 써야 함 
+  //XMLHttpRequest 객체를 생성하는 함수 생성
+ function createRequest(){
+	 try{
+		  return new XMLHttpRequest();
+	  }catch (exception) {
+		  var versions = [
+			'Msxm12.XMLHTTP.6.0',  
+			'Msxm12.XMLHTTP.5.0',
+			'Msxm12.XMLHTTP.4.0',
+			'Msxm12.XMLHTTP.3.0',
+			'Msxm12.XMLHTTP',
+			'Microsoft.XMLHttp'
+			];
+		   for(var i=0; i < versions.length; i++) {
+			  try {
+				  return new ActiveXObject(versions[i]);
+			  }catch (e) { }
+		  }
+	  }
+  }
+  
+  var request = createRequest();
+  request.open('GET', '/data.html', false); //동기 (비동기는 true)
+  
+  var prevDate = new Date();
+  request.send();
+  var nowDate = new Date();
+  
+  //출력합니다.
+  alert(nowDate - prevDate);
+  
+  
+  </script>
+</body>
+</html>

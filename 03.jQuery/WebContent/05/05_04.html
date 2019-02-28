@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style>
+div{
+width:50px; height:50px;
+background-color:Orange;
+position:relative;
+}
+</style>
+
+<script src="http://code.jquery.com/jquery-1.7.js"></script>
+<script src="jquery.innerfade.js"></script>
+<script>
+$(document).ready(function() {
+//innerfade 플러그인을 적용
+$('div').toggle(function(){
+	   $(this).animate({
+		  left:500 //toggle이 되면 왼쪽에서 500 떨어진 곳으로 보냄
+	    }, 'slow');
+    }, function() {
+    	$(this).animate({ 
+    		left:0 //toggle이 되면 왼쪽에서 0 떨어진 곳으로 보냄
+    	}, 'slow');
+    });
+
+});
+</script>
+
+</head>
+<body>
+
+<div></div>
+<div></div>
+<div></div>
+
+</body>
+</html>

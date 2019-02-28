@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style>
+div{
+width:50px; height:50px;
+background-color:Orange;
+position:relative;
+}
+</style>
+
+<script src="http://code.jquery.com/jquery-1.7.js"></script>
+<script src="jquery.innerfade.js"></script>
+<script>
+$(document).ready(function() {
+$('div').each(function(index){ //각각의 사각형에 0.5초 지연을 줘 순서대로 사각형이 이동할 수 있도록 작업
+	$(this).delay(index * 500).animate({
+		left:500
+	},'slow');
+});
+
+});
+</script>
+
+</head>
+<body>
+<div></div><div></div>
+<div></div><div></div>
+<div></div><div></div>
+</body>
+</html>

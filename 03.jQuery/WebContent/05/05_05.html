@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style>
+div{
+width:50px; height:50px;
+background-color:Orange;
+position:relative;
+border:3px solid White;
+border-radius:50%;
+}
+</style>
+
+<script src="http://code.jquery.com/jquery-1.7.js"></script>
+<script src="jquery.innerfade.js"></script>
+<script>
+$(document).ready(function() {
+//innerfade 플러그인을 적용
+$('div').click(function(){
+	  var width = $(this).css('width');
+	  var height = $(this).css('height');
+	  
+//	  if(height <= 1000 && width <=1000) {
+	    $(this).animate({
+		    width: parseInt(width) + 50,
+		    height: parseInt(height) + 50
+	     }, 'fast');
+//	  }else {
+//		  $(this).animate({
+//			  width: parseInt(width) - 50,
+//			  height: parseInt(height) - 50
+//		  }, 'fast');
+//	  }
+   });
+});
+</script>
+
+</head>
+<body>
+
+<div></div>
+
+
+</body>
+</html>

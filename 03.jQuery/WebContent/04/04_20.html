@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script src="http://code.jquery.com/jquery.js"></script>
+<script>
+$(document).ready(function (event) {
+	$('textarea').keyup(function() { //body에 있는 div 모두를 클릭했을 때 이벤트 실행
+		var inputLength = $(this).val().length;
+	    var remain = 10 - inputLength;
+	    
+	    $('h1').html(remain);
+	    
+	    if(remain >= 0) {
+	    	$('h1').css('color','Black');
+	    }else {
+	    	$('h1').css('color','Red');
+	    	event.preventDefault(); // 텍스트가 넘어가면 keyup 기능이 적용되지 않게 작업
+	    	alert("더이상 입력이 되지 않습니다.");
+	    }
+	});
+
+});
+</script>
+</head>
+<body>
+<div>
+<p>지금 내 생각을</p>
+<h1>10</h1>
+<textarea cols="70" rows="5"></textarea>
+</div>
+</body>
+</html>

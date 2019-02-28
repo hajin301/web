@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style>
+div{
+width:50px; height:50px;
+background-color:Orange;
+position:relative;
+border:3px solid White;
+border-radius:50%;
+}
+</style>
+
+<script src="http://code.jquery.com/jquery-1.7.js"></script>
+<script src="jquery.innerfade.js"></script>
+<script>
+$(document).ready(function() {
+//innerfade 플러그인을 적용
+$('div').click(function(){
+	$('div').click(function(){
+		$(this).animate({       //animate를 닷체인을 활용하여 적용
+			left:'+=60' //왼쪽으로 60 이동
+		},2000). animate({
+			width: '+=60' //가로 60 증가
+		},2000). animate({
+			height: '+=60' //높이 60 증가
+		},2000)
+	});
+});
+});
+</script>
+
+</head>
+<body>
+
+<div></div>
+
+
+</body>
+</html>

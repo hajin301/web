@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script src="http://code.jquery.com/jquery-1.7.js"></script>
+<script>
+$(document).ready(function () {
+	$('h1').live('click', function(){ //live() 이벤트는 현재 또는 미래에 존재하는 문서 객체에만 이벤트를 연결
+		var length = $('h1').length;
+		var targetHTML = $(this).html();
+		
+		$('#wrap').append('<h1>' + length + '-' + targetHTML + '</h1>');
+	});
+	//5초 후에는 h1 현재 및 미래에 존재하는 모든 이벤트가 제거되어 작동 안됨
+	setTimeout(function(){
+		$('h1').die();
+	},5000);
+});
+</script>
+</head>
+<body>
+<div id="wrap">
+<h1>Header</h1>
+</div>
+</body>
+</html>
