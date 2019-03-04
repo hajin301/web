@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script src="http://code.jquery.com/jquery.js"></script>
+<script>
+$(document).ready(function() {
+	$.ajax('/data.html', {  
+		success:function(data) {   //request.readyState == 4, request.status == 200로 상태 체크 하기 전에 일단 보내고 성공하면 function 진행
+			$('body').append(data);
+		}
+	});
+});
+</script>
+
+</head>
+<body>
+
+</body>
+</html>

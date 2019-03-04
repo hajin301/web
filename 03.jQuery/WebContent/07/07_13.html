@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>XMLHttpRequest</title>
+    
+    <script src="http://code.jquery.com/jquery.js"></script>
+    <script>
+       $(document).ready(function() { 
+    	   //변수 선언
+    	   var data = {
+    			   name: 'HongGilDong',
+    			   region: 'seoul'
+    	   };
+    	   
+    	   //출력
+    	   $('<h1></h1>').text($.param(data)).appendTo('body');
+
+       });
+    </script>
+</head>
+<body>
+
+</body>
+</html>
+
+

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>XMLHttpRequest</title>
+<script src= "xml2json.js"></script> <!-- XML을 JSON으로 변경, mytest에 파일 저장하기 -->
+</head>
+
+<body> 
+<script> // body에다가 script를 써야 함 
+  //XMLHttpRequest 객체를 생성하는 함수 생성
+ function createRequest(){
+	 try{
+		  return new XMLHttpRequest();
+	  }catch (exception) {
+		  var versions = [
+			'Msxm12.XMLHTTP.6.0',  
+			'Msxm12.XMLHTTP.5.0',
+			'Msxm12.XMLHTTP.4.0',
+			'Msxm12.XMLHTTP.3.0',
+			'Msxm12.XMLHTTP',
+			'Microsoft.XMLHttp'
+			];
+		   for(var i=0; i < versions.length; i++) {
+			  try {
+				  return new ActiveXObject(versions[i]);
+			  }catch (e) { }
+		  }
+	  }
+  }
+  
+  var request = createRequest();
+  
+  request.onreadystatechange = function (event) {
+	  if(request.readyState == 4 ) {//Ajax에서 모든 데이터를 전송받으면 4로 표시
+		if(request.status == 200) { //서버에서 모든 데이터를 보냈을 때 200으로 표시
+		    //지역변수를 선언
+			var json = xml2json.parser(request.responseText);
+			console.log(json); //json의 root 객체가 들어옴
+		    console.log(json.root); //root의 datas 객체가 들어옴
+		    console.log(json.root.datas);
+		    console.log(json.root.datas.data[0]);
+		    console.log(json.root.datas.data[1]);
+			//이용합니다.
+			for(var i = 0; i < json.root.datas.data.length; i++) {
+				document.body.innerHTML += '<h1>' + json.root.datas.data[i].name + '</h1>';
+				document.body.innerHTML += '<h2>' + json.root.datas.data[i].price + '</h2>';
+			}
+		 }
+		    
+			
+		};
+	  };   
+  
+  request.open('GET', '/data.xml', true); //동기 (비동기는 true)
+  request.send();
+  
+  </script>
+</body>
+</html>
