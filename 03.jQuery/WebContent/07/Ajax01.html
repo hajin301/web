@@ -9,7 +9,7 @@
 		//기본체크
 		var vName = $('#name').val();
 		
-		//submit_ajax();
+		submit_ajax();
 	}
 	
 	function submit_ajax() {
@@ -18,17 +18,17 @@
 			type: 'post',
 			dataType: 'text',
 			data: $('#my-form').serialize(),
-			error: function(xhr, status, error) {
+			error: function (xhr, status, error) {
 				alert(error);
 			},
-			success: function(data) {
+			success: function (data) {
 				return_xml(data);
 			}
 		});	
 	}
 	
 	function return_xml(data) {
-		$(data).find('data').each(function(){
+		$(data).find('data').each(function () {
 			var name = $(this).find('name').text();
 			var price = $(this).find('price').text();
 			
@@ -37,7 +37,7 @@
 		});
 	}
 	
-	$(document).ready(function() {
+	$(document).ready(function () {
 	
 	});
 </script>
@@ -48,7 +48,7 @@
 <table>
 <tr>
 <td>Name</td>
-<td><input id="name" name="name" type="type" /></td>
+<td><input id="name" name="name" type="text" /></td>
 </tr>
 <tr>
 <td>Region</td>
@@ -57,7 +57,6 @@
 </table>
 <input type = "button" value="Get Ajax String"  onclick="form_check();" />
 </form>
-
 <div id = "wrap">
 </div>
 </body>
