@@ -10,14 +10,13 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-
 @WebServlet("/FormEx")
 public class FormEx extends HttpServlet {
-	
+	private static final long serialVersionUID = 1L;
 
-	protected void doGet(HttpServletRequest request, HttpServletResponse response) 
-			throws ServletException, IOException 
-	{
+	protected void doGet(HttpServletRequest request, HttpServletResponse response)
+			throws ServletException, IOException {
+		
 		System.out.println("doGet");
 		
 	}
@@ -26,11 +25,11 @@ public class FormEx extends HttpServlet {
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) 
 			throws ServletException, IOException 
 	{
-		
-		System.out.println("doPost");
+        System.out.println("doPost");
 		
 		request.setCharacterEncoding("UTF-8");
 		
+		String name = request.getParameter("name");
 		String id = request.getParameter("id");
 		String pw = request.getParameter("pw");
 		
@@ -42,14 +41,15 @@ public class FormEx extends HttpServlet {
 		PrintWriter writer = response.getWriter();
 		
 		writer.println("<html><head><style>span{font-weight:bold; color: red}</style></head><body>");
+		writer.println("<span>이름 : </span>" + name + "<br>");
 		writer.println("<span>아이디 : </span>" + id + "<br>");
 		writer.println("<span>비밀번호 : </span>" + pw + "<br>");
 		writer.println("<span>취미 : </span>" + Arrays.deepToString(hobbys) + "<br>");
+		writer.println("<span>취미 : </span>" + Arrays.toString(hobbys) + "<br>");
+		
 		writer.println("<span>전공 : </span>" + major + "<br>");
 		writer.println("<span>프로토콜 : </span>" + protocol);
 		writer.println("</body></html>");
-
-		
 	}
 
 }

@@ -12,8 +12,9 @@ import javax.servlet.http.HttpServletResponse;
 
 @WebServlet("/PostMethod")
 public class PostMethod extends HttpServlet {
-       
+	private static final long serialVersionUID = 1L;
 
+	
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) 
 			throws ServletException, IOException 
 	{
@@ -42,9 +43,10 @@ public class PostMethod extends HttpServlet {
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) 
 			throws ServletException, IOException 
 	{
-	     System.out.println("doPost"); //post를 실행하기 위해서 html로 작성해서 웹브라우져로 오픈
-	     response.setContentType("text/html; charset=UTF-8"); //웹브라우져 html 파싱하기 위해
-			PrintWriter writer = response.getWriter();
+		 System.out.println("doPost"); //post를 실행하기 위해서 html로 작성해서 웹브라우져로 오픈
+	     
+		 response.setContentType("text/html; charset=UTF-8"); //웹브라우져 html 파싱하기 위해
+		 PrintWriter writer = response.getWriter();
 			
 			  writer.println("<html>");
 			  writer.println("<head>");
@@ -60,7 +62,6 @@ public class PostMethod extends HttpServlet {
 			  writer.println("HI");
 			  
 			  writer.close();
-	
 	}
 
 }

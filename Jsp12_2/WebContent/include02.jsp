@@ -7,6 +7,6 @@
 <title>Insert title here</title>
 </head>
 <body>
-   Hellow world~~
+<h1>include02.jsp 페이지 입니다.</h1>
 </body>
 </html>

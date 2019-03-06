@@ -10,8 +10,8 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 
-@WebServlet("/HellowWorld")
-public class HellowWorld extends HttpServlet {
+@WebServlet("/HelloWorld")
+public class HelloWorld extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 
 
@@ -19,7 +19,7 @@ public class HellowWorld extends HttpServlet {
 			throws ServletException, IOException 
 	{
 		
-		System.out.println("HelloworldId~~");
+         System.out.println("HelloworldId~~");
 		
 		response.setContentType("text/html; charset=UTF-8");
 		PrintWriter writer = response.getWriter();
@@ -38,11 +38,6 @@ public class HellowWorld extends HttpServlet {
 		  writer.println("HI");
 		  
 		  writer.close();
-		  
-		  
-		
 	}
-
-
 
 }

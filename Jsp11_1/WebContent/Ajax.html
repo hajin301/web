@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script src="http://code.jquery.com/jquery.js"></script>
+<script>
+	function form_check() {
+		//기본체크
+		var vName = $('#name').val();
+		submit_ajax();
+	}
+	
+	function submit_ajax() {
+		$.ajax({
+			url: '/requestcal1.jsp',
+			type: 'post',
+			dataType: 'text',
+			data: $('#my-form').serialize(),
+			error: function (xhr, status, error) {
+				alert(error);
+			},
+			success: function (data) {
+				return_requestcal(data);
+			}
+		});	
+	}
+	
+	function return_requestcal(data) {
+		$(data).find('data').each(function () {
+			var num1 = $(this).find('num1').text();
+			var num2 = $(this).find('num2').text();
+			var result = $(this).find('price').text();
+			
+			//출력
+			$('<h1></h1>').text('result').appendTo('body')
+		});
+	}
+	
+	$(document).ready(function () {
+	
+	});
+</script>
+
+</head>
+<body>
+
+<form id= "my-form">
+첫번째 수: <input type = "text" name = "num1" id="num1" size = "10"><br/> <!-- id는 자바스크립트용, 여기서는 name으로 읽힘 -->
+두번째 수: <input type = "text" name = "num2" id="num2" size = "10"><br/>
+
+<input type = "radio" name = "cal" value = "+" checked="checked">더하기
+<input type = "radio" name = "cal" value = "-">빼기
+<input type = "radio" name = "cal" value = "x">곱하기
+<input type = "radio" name = "cal" value = "/">나누기<br/>
+
+<input type = "submit" value="결과보기" onclick="form_check();" />
+
+</form>
+<div>
+
+</div>
+</body>
+</html>

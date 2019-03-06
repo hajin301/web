@@ -25,12 +25,10 @@
       <param-value>C:\\javalec\\workspace</param-value>
     </init-param>
   </servlet>
-  
   <servlet-mapping>
     <servlet-name>Servlet01</servlet-name>
     <url-pattern>/ServletInitParam</url-pattern>
   </servlet-mapping>
-  
   <context-param>
     <param-name>database</param-name>
     <param-value>oracle</param-value>
@@ -44,8 +42,9 @@
     <param-value>C:\javalec\workspace</param-value>
   </context-param>
   
-  <!-- was(톰캣)가 구동될 때 해당 class를 호출한다는 의미 -->
+   <!-- was(톰캣)가 구동될 때 해당 class를 호출한다는 의미 -->
   <listener>
     <listener-class>com.study.jsp03.ContextListenerEx</listener-class>
   </listener>
+  
 </web-app>

@@ -9,14 +9,16 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+
 @WebServlet("/ContextInitParam")
 public class ContextInitParam extends HttpServlet {
+	private static final long serialVersionUID = 1L;
+       
 
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) 
 			throws ServletException, IOException 
 	{
-		
-		System.out.println("doGet");
+       System.out.println("doGet");
 		
 		String id = getServletContext().getInitParameter("database");
 		String pw = getServletContext().getInitParameter("connect");
@@ -34,5 +36,6 @@ public class ContextInitParam extends HttpServlet {
 		writer.close();
 		
 	}
+
 
 }
