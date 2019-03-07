@@ -6218,3 +6218,712 @@ org.eclipse.wst.xml.core.internal.document.StructuredDocumentRegionManagementExc
 	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:659)
 	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:595)
 	at org.eclipse.equinox.launcher.Main.run(Main.java:1501)
+
+!ENTRY org.eclipse.jface.text 2 0 2019-03-06 18:28:15.844
+!MESSAGE Duplicate template id: 'org.eclipse.wst.xslt.templates.xpath.boolean'
+!SESSION 2019-03-07 09:19:34.552 -----------------------------------------------
+eclipse.buildId=3.9.7.201812201326-RELEASE-e410
+java.version=1.8.0_192
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=ko_KR
+Framework arguments:  -product org.springsource.sts.ide
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 -product org.springsource.sts.ide
+
+!ENTRY org.eclipse.core.resources 2 10035 2019-03-07 09:21:20.591
+!MESSAGE The workspace exited with unsaved changes in the previous session; refreshing workspace to recover changes.
+
+!ENTRY org.eclipse.jface 2 0 2019-03-07 09:21:24.631
+!MESSAGE Keybinding conflicts occurred.  They may interfere with normal accelerator operation.
+!SUBENTRY 1 org.eclipse.jface 2 0 2019-03-07 09:21:24.631
+!MESSAGE A conflict occurred for CTRL+SHIFT+T:
+Binding(CTRL+SHIFT+T,
+	ParameterizedCommand(Command(org.eclipse.jdt.ui.navigate.open.type,Open Type,
+		Open a type in a Java editor,
+		Category(org.eclipse.ui.category.navigate,Navigate,null,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@5f01361e,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+Binding(CTRL+SHIFT+T,
+	ParameterizedCommand(Command(org.eclipse.lsp4e.symbolinworkspace,Go to Symbol in Workspace,
+		,
+		Category(org.eclipse.lsp4e.category,Language Servers,null,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@769a9b7a,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+
+!ENTRY org.eclipse.jface.text 2 0 2019-03-07 09:21:33.983
+!MESSAGE Duplicate template id: 'org.eclipse.wst.xslt.templates.xpath.boolean'
+
+!ENTRY org.eclipse.egit.ui 2 0 2019-03-07 09:21:44.941
+!MESSAGE Warning: The environment variable HOME is not set. The following directory will be used to store the Git
+user global configuration and to define the default location to store repositories: 'C:\Users\kosmo02-13'. If this is
+not correct please set the HOME environment variable and restart Eclipse. Otherwise Git for Windows and
+EGit might behave differently since they see different configuration options.
+This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
+
+!ENTRY org.eclipse.jface.text 2 0 2019-03-07 09:55:44.428
+!MESSAGE Duplicate template id: 'org.eclipse.wst.xslt.templates.xpath.boolean'
+
+!ENTRY org.eclipse.jface.text 2 0 2019-03-07 09:56:44.322
+!MESSAGE Duplicate template id: 'org.eclipse.wst.xslt.templates.xpath.boolean'
+
+!ENTRY org.eclipse.jface.text 2 0 2019-03-07 10:39:11.798
+!MESSAGE Duplicate template id: 'org.eclipse.wst.xslt.templates.xpath.boolean'
+
+!ENTRY org.eclipse.jst.servlet.ui 4 0 2019-03-07 10:47:07.302
+!MESSAGE Jsp15_2.Exception does not exist
+!STACK 1
+Java Model Exception: Java Model Status [Jsp15_2.Exception does not exist]
+	at org.eclipse.jdt.internal.core.JavaElement.newJavaModelException(JavaElement.java:583)
+	at org.eclipse.jdt.internal.core.Openable.generateInfos(Openable.java:256)
+	at org.eclipse.jdt.internal.core.JavaElement.openWhenClosed(JavaElement.java:596)
+	at org.eclipse.jdt.internal.core.JavaElement.getElementInfo(JavaElement.java:326)
+	at org.eclipse.jdt.internal.core.JavaElement.getElementInfo(JavaElement.java:312)
+	at org.eclipse.jdt.internal.core.JavaElement.getChildren(JavaElement.java:267)
+	at org.eclipse.jdt.internal.core.JavaProject.getPackageFragmentRoots(JavaProject.java:2273)
+	at org.eclipse.jst.servlet.ui.internal.navigator.CompressedJavaProject.getNonExternalSourceFolders(CompressedJavaProject.java:81)
+	at org.eclipse.jst.servlet.ui.internal.navigator.CompressedJavaProject.getJavaElement(CompressedJavaProject.java:106)
+	at org.eclipse.jst.servlet.ui.internal.navigator.CompressedNodeAdapterFactory.getAdapter(CompressedNodeAdapterFactory.java:30)
+	at org.eclipse.core.internal.runtime.AdapterManager.getAdapter(AdapterManager.java:338)
+	at org.eclipse.core.internal.runtime.AdapterManager.loadAdapter(AdapterManager.java:365)
+	at org.eclipse.ui.internal.LegacyResourceSupport.getAdapter(LegacyResourceSupport.java:624)
+	at org.eclipse.ui.internal.decorators.LightweightDecoratorDefinition.decorate(LightweightDecoratorDefinition.java:253)
+	at org.eclipse.ui.internal.decorators.LightweightDecoratorManager$LightweightRunnable.run(LightweightDecoratorManager.java:107)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45)
+	at org.eclipse.ui.internal.decorators.LightweightDecoratorManager.decorate(LightweightDecoratorManager.java:380)
+	at org.eclipse.ui.internal.decorators.LightweightDecoratorManager.getDecorations(LightweightDecoratorManager.java:362)
+	at org.eclipse.ui.internal.decorators.DecorationScheduler$1.ensureResultCached(DecorationScheduler.java:350)
+	at org.eclipse.ui.internal.decorators.DecorationScheduler$1.run(DecorationScheduler.java:313)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+!SUBENTRY 1 org.eclipse.jdt.core 4 969 2019-03-07 10:47:07.303
+!MESSAGE Jsp15_2.Exception does not exist
+
+!ENTRY org.eclipse.core.resources 4 380 2019-03-07 10:55:47.415
+!MESSAGE The resource tree is locked for modifications.
+!STACK 0
+java.lang.Exception: The resource tree is locked for modifications.
+	at org.eclipse.core.internal.resources.ResourceException.provideStackTrace(ResourceException.java:42)
+	at org.eclipse.core.internal.resources.ResourceException.<init>(ResourceException.java:38)
+	at org.eclipse.core.internal.resources.WorkManager.checkIn(WorkManager.java:122)
+	at org.eclipse.core.internal.resources.Workspace.prepareOperation(Workspace.java:2243)
+	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2290)
+	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2322)
+	at org.eclipse.jst.jee.model.internal.common.AbstractMergedModelProvider.loadModel(AbstractMergedModelProvider.java:249)
+	at org.eclipse.jst.jee.model.internal.common.AbstractMergedModelProvider.getMergedModel(AbstractMergedModelProvider.java:219)
+	at org.eclipse.jst.jee.model.internal.common.AbstractMergedModelProvider.getModelObject(AbstractMergedModelProvider.java:139)
+	at org.eclipse.jst.jee.ui.internal.navigator.JEE5ContentProvider.getCachedContentProvider(JEE5ContentProvider.java:98)
+	at org.eclipse.jst.jee.ui.internal.navigator.Web25ContentProvider.getChildren(Web25ContentProvider.java:35)
+	at org.eclipse.ui.internal.navigator.extensions.SafeDelegateTreeContentProvider.getChildren(SafeDelegateTreeContentProvider.java:98)
+	at org.eclipse.ui.internal.navigator.extensions.SafeDelegateTreeContentProvider.getChildren(SafeDelegateTreeContentProvider.java:244)
+	at org.eclipse.ui.internal.navigator.extensions.SafeDelegateTreeContentProvider.getChildren(SafeDelegateTreeContentProvider.java:96)
+	at org.eclipse.ui.internal.navigator.NavigatorContentServiceContentProvider$1.run(NavigatorContentServiceContentProvider.java:160)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45)
+	at org.eclipse.ui.internal.navigator.NavigatorContentServiceContentProvider.internalGetChildren(NavigatorContentServiceContentProvider.java:146)
+	at org.eclipse.ui.internal.navigator.NavigatorContentServiceContentProvider.getChildren(NavigatorContentServiceContentProvider.java:132)
+	at org.eclipse.jface.viewers.AbstractTreeViewer.getRawChildren(AbstractTreeViewer.java:1415)
+	at org.eclipse.jface.viewers.TreeViewer.getRawChildren(TreeViewer.java:350)
+	at org.eclipse.jface.viewers.StructuredViewer.getFilteredChildren(StructuredViewer.java:903)
+	at org.eclipse.jface.viewers.AbstractTreeViewer.getSortedChildren(AbstractTreeViewer.java:621)
+	at org.eclipse.jface.viewers.AbstractTreeViewer.updateChildren(AbstractTreeViewer.java:2663)
+	at org.eclipse.jface.viewers.AbstractTreeViewer.internalRefreshStruct(AbstractTreeViewer.java:1953)
+	at org.eclipse.jface.viewers.TreeViewer.internalRefreshStruct(TreeViewer.java:677)
+	at org.eclipse.jface.viewers.AbstractTreeViewer.internalRefresh(AbstractTreeViewer.java:1929)
+	at org.eclipse.jface.viewers.AbstractTreeViewer.internalRefresh(AbstractTreeViewer.java:1886)
+	at org.eclipse.ui.navigator.CommonViewer.internalRefresh(CommonViewer.java:532)
+	at org.eclipse.jface.viewers.StructuredViewer.lambda$3(StructuredViewer.java:1533)
+	at org.eclipse.jface.viewers.StructuredViewer.preservingSelection(StructuredViewer.java:1449)
+	at org.eclipse.jface.viewers.TreeViewer.preservingSelection(TreeViewer.java:363)
+	at org.eclipse.jface.viewers.StructuredViewer.preservingSelection(StructuredViewer.java:1410)
+	at org.eclipse.jface.viewers.StructuredViewer.refresh(StructuredViewer.java:1533)
+	at org.eclipse.jface.viewers.ColumnViewer.refresh(ColumnViewer.java:538)
+	at org.eclipse.ui.navigator.CommonViewer.refresh(CommonViewer.java:349)
+	at org.eclipse.ui.navigator.CommonViewer.refresh(CommonViewer.java:495)
+	at org.eclipse.ui.internal.navigator.resources.workbench.ResourceExtensionContentProvider.lambda$2(ResourceExtensionContentProvider.java:305)
+	at org.eclipse.ui.internal.navigator.resources.workbench.ResourceExtensionContentProvider.runUpdates(ResourceExtensionContentProvider.java:314)
+	at org.eclipse.ui.internal.navigator.resources.workbench.ResourceExtensionContentProvider.processDelta(ResourceExtensionContentProvider.java:133)
+	at org.eclipse.ui.model.WorkbenchContentProvider.resourceChanged(WorkbenchContentProvider.java:103)
+	at org.eclipse.core.internal.events.NotificationManager$1.run(NotificationManager.java:300)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45)
+	at org.eclipse.core.internal.events.NotificationManager.notify(NotificationManager.java:290)
+	at org.eclipse.core.internal.events.NotificationManager.broadcastChanges(NotificationManager.java:153)
+	at org.eclipse.core.internal.resources.Workspace.broadcastPostChange(Workspace.java:379)
+	at org.eclipse.core.internal.resources.Workspace.endOperation(Workspace.java:1502)
+	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2308)
+	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2322)
+	at org.eclipse.ui.actions.WorkspaceModifyOperation.run(WorkspaceModifyOperation.java:131)
+	at org.eclipse.ui.internal.editors.text.WorkspaceOperationRunner.run(WorkspaceOperationRunner.java:76)
+	at org.eclipse.ui.internal.editors.text.WorkspaceOperationRunner.run(WorkspaceOperationRunner.java:66)
+	at org.eclipse.ui.editors.text.TextFileDocumentProvider.executeOperation(TextFileDocumentProvider.java:461)
+	at org.eclipse.ui.editors.text.TextFileDocumentProvider.saveDocument(TextFileDocumentProvider.java:764)
+	at org.eclipse.ui.texteditor.AbstractTextEditor.performSave(AbstractTextEditor.java:5007)
+	at org.eclipse.ui.texteditor.AbstractTextEditor.doSave(AbstractTextEditor.java:4807)
+	at org.eclipse.wst.sse.ui.StructuredTextEditor.doSave(StructuredTextEditor.java:1974)
+	at org.eclipse.wst.xml.ui.internal.tabletree.XMLMultiPageEditorPart.doSave(XMLMultiPageEditorPart.java:914)
+	at org.eclipse.ui.internal.SaveableHelper.lambda$0(SaveableHelper.java:157)
+	at org.eclipse.ui.internal.SaveableHelper.lambda$3(SaveableHelper.java:274)
+	at org.eclipse.jface.operation.ModalContext.runInCurrentThread(ModalContext.java:440)
+	at org.eclipse.jface.operation.ModalContext.run(ModalContext.java:356)
+	at org.eclipse.ui.internal.WorkbenchWindow.lambda$4(WorkbenchWindow.java:2249)
+	at org.eclipse.swt.custom.BusyIndicator.showWhile(BusyIndicator.java:72)
+	at org.eclipse.ui.internal.WorkbenchWindow.run(WorkbenchWindow.java:2247)
+	at org.eclipse.ui.internal.SaveableHelper.runProgressMonitorOperation(SaveableHelper.java:281)
+	at org.eclipse.ui.internal.SaveableHelper.runProgressMonitorOperation(SaveableHelper.java:262)
+	at org.eclipse.ui.internal.SaveableHelper.savePart(SaveableHelper.java:161)
+	at org.eclipse.ui.internal.WorkbenchPage.saveSaveable(WorkbenchPage.java:3976)
+	at org.eclipse.ui.internal.WorkbenchPage.saveEditor(WorkbenchPage.java:3990)
+	at org.eclipse.ui.internal.handlers.SaveHandler.execute(SaveHandler.java:57)
+	at org.eclipse.ui.internal.handlers.HandlerProxy.execute(HandlerProxy.java:294)
+	at org.eclipse.ui.internal.handlers.E4HandlerProxy.execute(E4HandlerProxy.java:96)
+	at sun.reflect.GeneratedMethodAccessor130.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.eclipse.e4.core.internal.di.MethodRequestor.execute(MethodRequestor.java:58)
+	at org.eclipse.e4.core.internal.di.InjectorImpl.invokeUsingClass(InjectorImpl.java:320)
+	at org.eclipse.e4.core.internal.di.InjectorImpl.invoke(InjectorImpl.java:254)
+	at org.eclipse.e4.core.contexts.ContextInjectionFactory.invoke(ContextInjectionFactory.java:164)
+	at org.eclipse.e4.core.commands.internal.HandlerServiceHandler.execute(HandlerServiceHandler.java:156)
+	at org.eclipse.core.commands.Command.executeWithChecks(Command.java:497)
+	at org.eclipse.core.commands.ParameterizedCommand.executeWithChecks(ParameterizedCommand.java:490)
+	at org.eclipse.e4.core.commands.internal.HandlerServiceImpl.executeHandler(HandlerServiceImpl.java:213)
+	at org.eclipse.e4.ui.bindings.keys.KeyBindingDispatcher.executeCommand(KeyBindingDispatcher.java:308)
+	at org.eclipse.e4.ui.bindings.keys.KeyBindingDispatcher.press(KeyBindingDispatcher.java:584)
+	at org.eclipse.e4.ui.bindings.keys.KeyBindingDispatcher.processKeyEvent(KeyBindingDispatcher.java:653)
+	at org.eclipse.e4.ui.bindings.keys.KeyBindingDispatcher.filterKeySequenceBindings(KeyBindingDispatcher.java:443)
+	at org.eclipse.e4.ui.bindings.keys.KeyBindingDispatcher.access$2(KeyBindingDispatcher.java:386)
+	at org.eclipse.e4.ui.bindings.keys.KeyBindingDispatcher$KeyDownFilter.handleEvent(KeyBindingDispatcher.java:96)
+	at org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:89)
+	at org.eclipse.swt.widgets.Display.filterEvent(Display.java:1193)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1054)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1079)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1064)
+	at org.eclipse.swt.widgets.Widget.sendKeyEvent(Widget.java:1106)
+	at org.eclipse.swt.widgets.Widget.sendKeyEvent(Widget.java:1102)
+	at org.eclipse.swt.widgets.Widget.wmChar(Widget.java:1489)
+	at org.eclipse.swt.widgets.Control.WM_CHAR(Control.java:4888)
+	at org.eclipse.swt.widgets.Canvas.WM_CHAR(Canvas.java:353)
+	at org.eclipse.swt.widgets.Control.windowProc(Control.java:4768)
+	at org.eclipse.swt.widgets.Canvas.windowProc(Canvas.java:348)
+	at org.eclipse.swt.widgets.Display.windowProc(Display.java:4770)
+	at org.eclipse.swt.internal.win32.OS.DispatchMessage(Native Method)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3545)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$5.run(PartRenderingEngine.java:1173)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:339)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.run(PartRenderingEngine.java:1062)
+	at org.eclipse.e4.ui.internal.workbench.E4Workbench.createAndRunUI(E4Workbench.java:156)
+	at org.eclipse.ui.internal.Workbench.lambda$3(Workbench.java:636)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:339)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:563)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:151)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:155)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:203)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:137)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:107)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:400)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:255)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:659)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:595)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1501)
+
+!ENTRY org.eclipse.jface.text 2 0 2019-03-07 11:03:33.979
+!MESSAGE Duplicate template id: 'org.eclipse.wst.xslt.templates.xpath.boolean'
+
+!ENTRY org.eclipse.jst.server.tomcat.core 4 0 2019-03-07 12:18:07.325
+!MESSAGE Several ports (8005, 8081, 8009) required by Tomcat v8.5 Server at localhost are already in use. The server may already be running in another process, or a system process may be using the port. To start this server you will need to stop the other process or change the port number(s).
+
+!ENTRY org.eclipse.jst.server.tomcat.core 4 0 2019-03-07 12:18:15.242
+!MESSAGE Several ports (8005, 8081, 8009) required by Tomcat v8.5 Server at localhost are already in use. The server may already be running in another process, or a system process may be using the port. To start this server you will need to stop the other process or change the port number(s).
+
+!ENTRY org.eclipse.jface.text 2 0 2019-03-07 15:02:33.512
+!MESSAGE Duplicate template id: 'org.eclipse.wst.xslt.templates.xpath.boolean'
+
+!ENTRY org.eclipse.egit.core 4 0 2019-03-07 17:25:31.822
+!MESSAGE Git team provider configuration has gone missing.
+!STACK 0
+java.io.FileNotFoundException: D:\hajin301\web\.metadata\.plugins\org.eclipse.core.resources\.projects\Jsp19.hw\org.eclipse.egit.core\GitProjectData.properties (지정된 파일을 찾을 수 없습니다)
+	at java.io.FileInputStream.open0(Native Method)
+	at java.io.FileInputStream.open(FileInputStream.java:195)
+	at java.io.FileInputStream.<init>(FileInputStream.java:138)
+	at org.eclipse.egit.core.project.GitProjectData.load(GitProjectData.java:623)
+	at org.eclipse.egit.core.project.GitProjectData.get(GitProjectData.java:221)
+	at org.eclipse.egit.core.internal.indexdiff.GitResourceDeltaVisitor.visit(GitResourceDeltaVisitor.java:117)
+	at org.eclipse.core.internal.events.ResourceDelta.accept(ResourceDelta.java:67)
+	at org.eclipse.core.internal.events.ResourceDelta.accept(ResourceDelta.java:77)
+	at org.eclipse.core.internal.events.ResourceDelta.accept(ResourceDelta.java:51)
+	at org.eclipse.egit.core.internal.indexdiff.IndexDiffCacheEntry$6.resourceChanged(IndexDiffCacheEntry.java:740)
+	at org.eclipse.core.internal.events.NotificationManager$1.run(NotificationManager.java:300)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45)
+	at org.eclipse.core.internal.events.NotificationManager.notify(NotificationManager.java:290)
+	at org.eclipse.core.internal.events.NotificationManager.broadcastChanges(NotificationManager.java:153)
+	at org.eclipse.core.internal.resources.Workspace.broadcastPostChange(Workspace.java:379)
+	at org.eclipse.core.internal.resources.Workspace.checkpoint(Workspace.java:565)
+	at org.eclipse.ltk.core.refactoring.PerformChangeOperation$1.run(PerformChangeOperation.java:265)
+	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2295)
+	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2322)
+	at org.eclipse.ltk.core.refactoring.PerformChangeOperation.executeChange(PerformChangeOperation.java:308)
+	at org.eclipse.ltk.internal.ui.refactoring.UIPerformChangeOperation.executeChange(UIPerformChangeOperation.java:99)
+	at org.eclipse.ltk.core.refactoring.PerformChangeOperation.run(PerformChangeOperation.java:219)
+	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2295)
+	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2322)
+	at org.eclipse.ltk.internal.ui.refactoring.WorkbenchRunnableAdapter.run(WorkbenchRunnableAdapter.java:89)
+	at org.eclipse.jface.operation.ModalContext$ModalContextThread.run(ModalContext.java:122)
+
+!ENTRY org.eclipse.ltk.ui.refactoring 4 10000 2019-03-07 17:25:31.846
+!MESSAGE Internal Error
+!STACK 1
+org.eclipse.core.internal.resources.ResourceException: Problems encountered while deleting resources.
+	at org.eclipse.core.internal.resources.Resource.delete(Resource.java:765)
+	at org.eclipse.core.internal.resources.Project.delete(Project.java:322)
+	at org.eclipse.ltk.core.refactoring.resource.DeleteResourceChange.perform(DeleteResourceChange.java:158)
+	at org.eclipse.ltk.core.refactoring.CompositeChange.perform(CompositeChange.java:283)
+	at org.eclipse.ltk.core.refactoring.CompositeChange.perform(CompositeChange.java:283)
+	at org.eclipse.ltk.core.refactoring.PerformChangeOperation$1.run(PerformChangeOperation.java:260)
+	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2295)
+	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2322)
+	at org.eclipse.ltk.core.refactoring.PerformChangeOperation.executeChange(PerformChangeOperation.java:308)
+	at org.eclipse.ltk.internal.ui.refactoring.UIPerformChangeOperation.executeChange(UIPerformChangeOperation.java:99)
+	at org.eclipse.ltk.core.refactoring.PerformChangeOperation.run(PerformChangeOperation.java:219)
+	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2295)
+	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2322)
+	at org.eclipse.ltk.internal.ui.refactoring.WorkbenchRunnableAdapter.run(WorkbenchRunnableAdapter.java:89)
+	at org.eclipse.jface.operation.ModalContext$ModalContextThread.run(ModalContext.java:122)
+Contains: Could not delete '/Jsp19.hw/src'.
+org.eclipse.core.internal.resources.ResourceException: Problems encountered while deleting resources.
+	at org.eclipse.core.internal.localstore.FileSystemResourceManager.delete(FileSystemResourceManager.java:367)
+	at org.eclipse.core.internal.resources.ResourceTree.internalDeleteFolder(ResourceTree.java:361)
+	at org.eclipse.core.internal.resources.ResourceTree.internalDeleteProject(ResourceTree.java:396)
+	at org.eclipse.core.internal.resources.ResourceTree.standardDeleteProject(ResourceTree.java:853)
+	at org.eclipse.core.internal.resources.Resource.unprotectedDelete(Resource.java:1775)
+	at org.eclipse.core.internal.resources.Resource.delete(Resource.java:752)
+	at org.eclipse.core.internal.resources.Project.delete(Project.java:322)
+	at org.eclipse.ltk.core.refactoring.resource.DeleteResourceChange.perform(DeleteResourceChange.java:158)
+	at org.eclipse.ltk.core.refactoring.CompositeChange.perform(CompositeChange.java:283)
+	at org.eclipse.ltk.core.refactoring.CompositeChange.perform(CompositeChange.java:283)
+	at org.eclipse.ltk.core.refactoring.PerformChangeOperation$1.run(PerformChangeOperation.java:260)
+	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2295)
+	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2322)
+	at org.eclipse.ltk.core.refactoring.PerformChangeOperation.executeChange(PerformChangeOperation.java:308)
+	at org.eclipse.ltk.internal.ui.refactoring.UIPerformChangeOperation.executeChange(UIPerformChangeOperation.java:99)
+	at org.eclipse.ltk.core.refactoring.PerformChangeOperation.run(PerformChangeOperation.java:219)
+	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2295)
+	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2322)
+	at org.eclipse.ltk.internal.ui.refactoring.WorkbenchRunnableAdapter.run(WorkbenchRunnableAdapter.java:89)
+	at org.eclipse.jface.operation.ModalContext$ModalContextThread.run(ModalContext.java:122)
+Contains: Problems encountered while deleting files.
+Contains: Could not delete: D:\hajin301\web\Jsp19.hw\src\com\study.
+java.nio.file.DirectoryNotEmptyException: D:\hajin301\web\Jsp19.hw\src\com\study
+	at sun.nio.fs.WindowsFileSystemProvider.implDelete(WindowsFileSystemProvider.java:266)
+	at sun.nio.fs.AbstractFileSystemProvider.deleteIfExists(AbstractFileSystemProvider.java:108)
+	at java.nio.file.Files.deleteIfExists(Files.java:1165)
+	at org.eclipse.core.internal.filesystem.local.LocalFile.internalDelete(LocalFile.java:256)
+	at org.eclipse.core.internal.filesystem.local.LocalFile.internalDelete(LocalFile.java:251)
+	at org.eclipse.core.internal.filesystem.local.LocalFile.internalDelete(LocalFile.java:251)
+	at org.eclipse.core.internal.filesystem.local.LocalFile.delete(LocalFile.java:140)
+	at org.eclipse.core.internal.localstore.DeleteVisitor.delete(DeleteVisitor.java:66)
+	at org.eclipse.core.internal.localstore.DeleteVisitor.visit(DeleteVisitor.java:154)
+	at org.eclipse.core.internal.localstore.UnifiedTree.accept(UnifiedTree.java:118)
+	at org.eclipse.core.internal.localstore.FileSystemResourceManager.delete(FileSystemResourceManager.java:364)
+	at org.eclipse.core.internal.resources.ResourceTree.internalDeleteFolder(ResourceTree.java:361)
+	at org.eclipse.core.internal.resources.ResourceTree.internalDeleteProject(ResourceTree.java:396)
+	at org.eclipse.core.internal.resources.ResourceTree.standardDeleteProject(ResourceTree.java:853)
+	at org.eclipse.core.internal.resources.Resource.unprotectedDelete(Resource.java:1775)
+	at org.eclipse.core.internal.resources.Resource.delete(Resource.java:752)
+	at org.eclipse.core.internal.resources.Project.delete(Project.java:322)
+	at org.eclipse.ltk.core.refactoring.resource.DeleteResourceChange.perform(DeleteResourceChange.java:158)
+	at org.eclipse.ltk.core.refactoring.CompositeChange.perform(CompositeChange.java:283)
+	at org.eclipse.ltk.core.refactoring.CompositeChange.perform(CompositeChange.java:283)
+	at org.eclipse.ltk.core.refactoring.PerformChangeOperation$1.run(PerformChangeOperation.java:260)
+	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2295)
+	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2322)
+	at org.eclipse.ltk.core.refactoring.PerformChangeOperation.executeChange(PerformChangeOperation.java:308)
+	at org.eclipse.ltk.internal.ui.refactoring.UIPerformChangeOperation.executeChange(UIPerformChangeOperation.java:99)
+	at org.eclipse.ltk.core.refactoring.PerformChangeOperation.run(PerformChangeOperation.java:219)
+	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2295)
+	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2322)
+	at org.eclipse.ltk.internal.ui.refactoring.WorkbenchRunnableAdapter.run(WorkbenchRunnableAdapter.java:89)
+	at org.eclipse.jface.operation.ModalContext$ModalContextThread.run(ModalContext.java:122)
+Contains: Could not delete: D:\hajin301\web\Jsp19.hw\src\com.
+Contains: Could not delete: D:\hajin301\web\Jsp19.hw\src.
+Contains: Could not delete 'D:\hajin301\web\Jsp19.hw'.
+!SUBENTRY 1 org.eclipse.core.resources 4 273 2019-03-07 17:25:31.847
+!MESSAGE Problems encountered while deleting resources.
+!SUBENTRY 2 org.eclipse.core.resources 4 273 2019-03-07 17:25:31.847
+!MESSAGE Could not delete '/Jsp19.hw/src'.
+!STACK 1
+org.eclipse.core.internal.resources.ResourceException: Problems encountered while deleting resources.
+	at org.eclipse.core.internal.localstore.FileSystemResourceManager.delete(FileSystemResourceManager.java:367)
+	at org.eclipse.core.internal.resources.ResourceTree.internalDeleteFolder(ResourceTree.java:361)
+	at org.eclipse.core.internal.resources.ResourceTree.internalDeleteProject(ResourceTree.java:396)
+	at org.eclipse.core.internal.resources.ResourceTree.standardDeleteProject(ResourceTree.java:853)
+	at org.eclipse.core.internal.resources.Resource.unprotectedDelete(Resource.java:1775)
+	at org.eclipse.core.internal.resources.Resource.delete(Resource.java:752)
+	at org.eclipse.core.internal.resources.Project.delete(Project.java:322)
+	at org.eclipse.ltk.core.refactoring.resource.DeleteResourceChange.perform(DeleteResourceChange.java:158)
+	at org.eclipse.ltk.core.refactoring.CompositeChange.perform(CompositeChange.java:283)
+	at org.eclipse.ltk.core.refactoring.CompositeChange.perform(CompositeChange.java:283)
+	at org.eclipse.ltk.core.refactoring.PerformChangeOperation$1.run(PerformChangeOperation.java:260)
+	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2295)
+	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2322)
+	at org.eclipse.ltk.core.refactoring.PerformChangeOperation.executeChange(PerformChangeOperation.java:308)
+	at org.eclipse.ltk.internal.ui.refactoring.UIPerformChangeOperation.executeChange(UIPerformChangeOperation.java:99)
+	at org.eclipse.ltk.core.refactoring.PerformChangeOperation.run(PerformChangeOperation.java:219)
+	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2295)
+	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2322)
+	at org.eclipse.ltk.internal.ui.refactoring.WorkbenchRunnableAdapter.run(WorkbenchRunnableAdapter.java:89)
+	at org.eclipse.jface.operation.ModalContext$ModalContextThread.run(ModalContext.java:122)
+Contains: Problems encountered while deleting files.
+Contains: Could not delete: D:\hajin301\web\Jsp19.hw\src\com\study.
+java.nio.file.DirectoryNotEmptyException: D:\hajin301\web\Jsp19.hw\src\com\study
+	at sun.nio.fs.WindowsFileSystemProvider.implDelete(WindowsFileSystemProvider.java:266)
+	at sun.nio.fs.AbstractFileSystemProvider.deleteIfExists(AbstractFileSystemProvider.java:108)
+	at java.nio.file.Files.deleteIfExists(Files.java:1165)
+	at org.eclipse.core.internal.filesystem.local.LocalFile.internalDelete(LocalFile.java:256)
+	at org.eclipse.core.internal.filesystem.local.LocalFile.internalDelete(LocalFile.java:251)
+	at org.eclipse.core.internal.filesystem.local.LocalFile.internalDelete(LocalFile.java:251)
+	at org.eclipse.core.internal.filesystem.local.LocalFile.delete(LocalFile.java:140)
+	at org.eclipse.core.internal.localstore.DeleteVisitor.delete(DeleteVisitor.java:66)
+	at org.eclipse.core.internal.localstore.DeleteVisitor.visit(DeleteVisitor.java:154)
+	at org.eclipse.core.internal.localstore.UnifiedTree.accept(UnifiedTree.java:118)
+	at org.eclipse.core.internal.localstore.FileSystemResourceManager.delete(FileSystemResourceManager.java:364)
+	at org.eclipse.core.internal.resources.ResourceTree.internalDeleteFolder(ResourceTree.java:361)
+	at org.eclipse.core.internal.resources.ResourceTree.internalDeleteProject(ResourceTree.java:396)
+	at org.eclipse.core.internal.resources.ResourceTree.standardDeleteProject(ResourceTree.java:853)
+	at org.eclipse.core.internal.resources.Resource.unprotectedDelete(Resource.java:1775)
+	at org.eclipse.core.internal.resources.Resource.delete(Resource.java:752)
+	at org.eclipse.core.internal.resources.Project.delete(Project.java:322)
+	at org.eclipse.ltk.core.refactoring.resource.DeleteResourceChange.perform(DeleteResourceChange.java:158)
+	at org.eclipse.ltk.core.refactoring.CompositeChange.perform(CompositeChange.java:283)
+	at org.eclipse.ltk.core.refactoring.CompositeChange.perform(CompositeChange.java:283)
+	at org.eclipse.ltk.core.refactoring.PerformChangeOperation$1.run(PerformChangeOperation.java:260)
+	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2295)
+	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2322)
+	at org.eclipse.ltk.core.refactoring.PerformChangeOperation.executeChange(PerformChangeOperation.java:308)
+	at org.eclipse.ltk.internal.ui.refactoring.UIPerformChangeOperation.executeChange(UIPerformChangeOperation.java:99)
+	at org.eclipse.ltk.core.refactoring.PerformChangeOperation.run(PerformChangeOperation.java:219)
+	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2295)
+	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2322)
+	at org.eclipse.ltk.internal.ui.refactoring.WorkbenchRunnableAdapter.run(WorkbenchRunnableAdapter.java:89)
+	at org.eclipse.jface.operation.ModalContext$ModalContextThread.run(ModalContext.java:122)
+Contains: Could not delete: D:\hajin301\web\Jsp19.hw\src\com.
+Contains: Could not delete: D:\hajin301\web\Jsp19.hw\src.
+!SUBENTRY 3 org.eclipse.core.resources 4 273 2019-03-07 17:25:31.847
+!MESSAGE Problems encountered while deleting resources.
+!SUBENTRY 4 org.eclipse.core.filesystem 4 273 2019-03-07 17:25:31.847
+!MESSAGE Problems encountered while deleting files.
+!SUBENTRY 5 org.eclipse.core.filesystem 4 273 2019-03-07 17:25:31.847
+!MESSAGE Could not delete: D:\hajin301\web\Jsp19.hw\src\com\study.
+!STACK 0
+java.nio.file.DirectoryNotEmptyException: D:\hajin301\web\Jsp19.hw\src\com\study
+	at sun.nio.fs.WindowsFileSystemProvider.implDelete(WindowsFileSystemProvider.java:266)
+	at sun.nio.fs.AbstractFileSystemProvider.deleteIfExists(AbstractFileSystemProvider.java:108)
+	at java.nio.file.Files.deleteIfExists(Files.java:1165)
+	at org.eclipse.core.internal.filesystem.local.LocalFile.internalDelete(LocalFile.java:256)
+	at org.eclipse.core.internal.filesystem.local.LocalFile.internalDelete(LocalFile.java:251)
+	at org.eclipse.core.internal.filesystem.local.LocalFile.internalDelete(LocalFile.java:251)
+	at org.eclipse.core.internal.filesystem.local.LocalFile.delete(LocalFile.java:140)
+	at org.eclipse.core.internal.localstore.DeleteVisitor.delete(DeleteVisitor.java:66)
+	at org.eclipse.core.internal.localstore.DeleteVisitor.visit(DeleteVisitor.java:154)
+	at org.eclipse.core.internal.localstore.UnifiedTree.accept(UnifiedTree.java:118)
+	at org.eclipse.core.internal.localstore.FileSystemResourceManager.delete(FileSystemResourceManager.java:364)
+	at org.eclipse.core.internal.resources.ResourceTree.internalDeleteFolder(ResourceTree.java:361)
+	at org.eclipse.core.internal.resources.ResourceTree.internalDeleteProject(ResourceTree.java:396)
+	at org.eclipse.core.internal.resources.ResourceTree.standardDeleteProject(ResourceTree.java:853)
+	at org.eclipse.core.internal.resources.Resource.unprotectedDelete(Resource.java:1775)
+	at org.eclipse.core.internal.resources.Resource.delete(Resource.java:752)
+	at org.eclipse.core.internal.resources.Project.delete(Project.java:322)
+	at org.eclipse.ltk.core.refactoring.resource.DeleteResourceChange.perform(DeleteResourceChange.java:158)
+	at org.eclipse.ltk.core.refactoring.CompositeChange.perform(CompositeChange.java:283)
+	at org.eclipse.ltk.core.refactoring.CompositeChange.perform(CompositeChange.java:283)
+	at org.eclipse.ltk.core.refactoring.PerformChangeOperation$1.run(PerformChangeOperation.java:260)
+	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2295)
+	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2322)
+	at org.eclipse.ltk.core.refactoring.PerformChangeOperation.executeChange(PerformChangeOperation.java:308)
+	at org.eclipse.ltk.internal.ui.refactoring.UIPerformChangeOperation.executeChange(UIPerformChangeOperation.java:99)
+	at org.eclipse.ltk.core.refactoring.PerformChangeOperation.run(PerformChangeOperation.java:219)
+	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2295)
+	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2322)
+	at org.eclipse.ltk.internal.ui.refactoring.WorkbenchRunnableAdapter.run(WorkbenchRunnableAdapter.java:89)
+	at org.eclipse.jface.operation.ModalContext$ModalContextThread.run(ModalContext.java:122)
+!SUBENTRY 5 org.eclipse.core.filesystem 4 273 2019-03-07 17:25:31.847
+!MESSAGE Could not delete: D:\hajin301\web\Jsp19.hw\src\com.
+!SUBENTRY 5 org.eclipse.core.filesystem 4 273 2019-03-07 17:25:31.847
+!MESSAGE Could not delete: D:\hajin301\web\Jsp19.hw\src.
+!SUBENTRY 2 org.eclipse.core.resources 4 273 2019-03-07 17:25:31.847
+!MESSAGE Could not delete 'D:\hajin301\web\Jsp19.hw'.
+
+!ENTRY org.eclipse.core.jobs 4 2 2019-03-07 17:25:34.753
+!MESSAGE An internal error occurred during: "Loading descriptor for Jsp19.hw.".
+!STACK 0
+java.lang.NullPointerException
+	at org.eclipse.jst.jee.model.internal.JEE5ModelProvider.getModelResource(JEE5ModelProvider.java:175)
+	at org.eclipse.jst.jee.model.internal.Web25ModelProvider.getModelObject(Web25ModelProvider.java:44)
+	at org.eclipse.jst.jee.model.internal.JEE5ModelProvider.getModelObject(JEE5ModelProvider.java:231)
+	at org.eclipse.jst.jee.model.internal.common.AbstractMergedModelProvider.loadProviders(AbstractMergedModelProvider.java:261)
+	at org.eclipse.jst.jee.model.internal.common.AbstractMergedModelProvider.access$2(AbstractMergedModelProvider.java:255)
+	at org.eclipse.jst.jee.model.internal.common.AbstractMergedModelProvider$LoadModelsWorkspaceRunnable.run(AbstractMergedModelProvider.java:278)
+	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2295)
+	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2322)
+	at org.eclipse.jst.jee.model.internal.common.AbstractMergedModelProvider.loadModel(AbstractMergedModelProvider.java:249)
+	at org.eclipse.jst.jee.model.internal.common.AbstractMergedModelProvider.getMergedModel(AbstractMergedModelProvider.java:219)
+	at org.eclipse.jst.jee.model.internal.common.AbstractMergedModelProvider.getModelObject(AbstractMergedModelProvider.java:139)
+	at org.eclipse.jst.jee.ui.internal.navigator.Web25ContentProvider.getNewContentProviderInstance(Web25ContentProvider.java:69)
+	at org.eclipse.jst.jee.ui.internal.navigator.LoadingJeeDDJob.run(LoadingJeeDDJob.java:50)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+
+!ENTRY org.eclipse.egit.core 4 0 2019-03-07 17:25:34.788
+!MESSAGE Git team provider configuration has gone missing.
+!STACK 0
+java.io.FileNotFoundException: D:\hajin301\web\.metadata\.plugins\org.eclipse.core.resources\.projects\Jsp19.hw\org.eclipse.egit.core\GitProjectData.properties (지정된 파일을 찾을 수 없습니다)
+	at java.io.FileInputStream.open0(Native Method)
+	at java.io.FileInputStream.open(FileInputStream.java:195)
+	at java.io.FileInputStream.<init>(FileInputStream.java:138)
+	at org.eclipse.egit.core.project.GitProjectData.load(GitProjectData.java:623)
+	at org.eclipse.egit.core.project.GitProjectData.get(GitProjectData.java:221)
+	at org.eclipse.egit.core.internal.indexdiff.GitResourceDeltaVisitor.visit(GitResourceDeltaVisitor.java:117)
+	at org.eclipse.core.internal.events.ResourceDelta.accept(ResourceDelta.java:67)
+	at org.eclipse.core.internal.events.ResourceDelta.accept(ResourceDelta.java:77)
+	at org.eclipse.core.internal.events.ResourceDelta.accept(ResourceDelta.java:51)
+	at org.eclipse.egit.core.internal.indexdiff.IndexDiffCacheEntry$6.resourceChanged(IndexDiffCacheEntry.java:740)
+	at org.eclipse.core.internal.events.NotificationManager$1.run(NotificationManager.java:300)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45)
+	at org.eclipse.core.internal.events.NotificationManager.notify(NotificationManager.java:290)
+	at org.eclipse.core.internal.events.NotificationManager.broadcastChanges(NotificationManager.java:153)
+	at org.eclipse.core.internal.resources.Workspace.broadcastPostChange(Workspace.java:379)
+	at org.eclipse.core.internal.resources.Workspace.endOperation(Workspace.java:1502)
+	at org.eclipse.core.internal.resources.InternalWorkspaceJob.run(InternalWorkspaceJob.java:49)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+
+!ENTRY org.eclipse.egit.core 4 0 2019-03-07 17:25:44.667
+!MESSAGE Git team provider configuration has gone missing.
+!STACK 0
+java.io.FileNotFoundException: D:\hajin301\web\.metadata\.plugins\org.eclipse.core.resources\.projects\Jsp19.hw\org.eclipse.egit.core\GitProjectData.properties (지정된 파일을 찾을 수 없습니다)
+	at java.io.FileInputStream.open0(Native Method)
+	at java.io.FileInputStream.open(FileInputStream.java:195)
+	at java.io.FileInputStream.<init>(FileInputStream.java:138)
+	at org.eclipse.egit.core.project.GitProjectData.load(GitProjectData.java:623)
+	at org.eclipse.egit.core.project.GitProjectData.get(GitProjectData.java:221)
+	at org.eclipse.egit.core.internal.indexdiff.GitResourceDeltaVisitor.visit(GitResourceDeltaVisitor.java:117)
+	at org.eclipse.core.internal.events.ResourceDelta.accept(ResourceDelta.java:67)
+	at org.eclipse.core.internal.events.ResourceDelta.accept(ResourceDelta.java:77)
+	at org.eclipse.core.internal.events.ResourceDelta.accept(ResourceDelta.java:51)
+	at org.eclipse.egit.core.internal.indexdiff.IndexDiffCacheEntry$6.resourceChanged(IndexDiffCacheEntry.java:740)
+	at org.eclipse.core.internal.events.NotificationManager$1.run(NotificationManager.java:300)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45)
+	at org.eclipse.core.internal.events.NotificationManager.notify(NotificationManager.java:290)
+	at org.eclipse.core.internal.events.NotificationManager.broadcastChanges(NotificationManager.java:153)
+	at org.eclipse.core.internal.resources.Workspace.broadcastPostChange(Workspace.java:379)
+	at org.eclipse.core.internal.resources.Workspace.checkpoint(Workspace.java:565)
+	at org.eclipse.ltk.core.refactoring.PerformChangeOperation$1.run(PerformChangeOperation.java:265)
+	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2295)
+	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2322)
+	at org.eclipse.ltk.core.refactoring.PerformChangeOperation.executeChange(PerformChangeOperation.java:308)
+	at org.eclipse.ltk.internal.ui.refactoring.UIPerformChangeOperation.executeChange(UIPerformChangeOperation.java:99)
+	at org.eclipse.ltk.core.refactoring.PerformChangeOperation.run(PerformChangeOperation.java:219)
+	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2295)
+	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2322)
+	at org.eclipse.ltk.internal.ui.refactoring.WorkbenchRunnableAdapter.run(WorkbenchRunnableAdapter.java:89)
+	at org.eclipse.jface.operation.ModalContext$ModalContextThread.run(ModalContext.java:122)
+
+!ENTRY org.eclipse.ltk.ui.refactoring 4 10000 2019-03-07 17:25:44.686
+!MESSAGE Internal Error
+!STACK 1
+org.eclipse.core.internal.resources.ResourceException: Problems encountered while deleting resources.
+	at org.eclipse.core.internal.resources.Resource.delete(Resource.java:765)
+	at org.eclipse.core.internal.resources.Project.delete(Project.java:322)
+	at org.eclipse.ltk.core.refactoring.resource.DeleteResourceChange.perform(DeleteResourceChange.java:158)
+	at org.eclipse.ltk.core.refactoring.CompositeChange.perform(CompositeChange.java:283)
+	at org.eclipse.ltk.core.refactoring.CompositeChange.perform(CompositeChange.java:283)
+	at org.eclipse.ltk.core.refactoring.PerformChangeOperation$1.run(PerformChangeOperation.java:260)
+	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2295)
+	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2322)
+	at org.eclipse.ltk.core.refactoring.PerformChangeOperation.executeChange(PerformChangeOperation.java:308)
+	at org.eclipse.ltk.internal.ui.refactoring.UIPerformChangeOperation.executeChange(UIPerformChangeOperation.java:99)
+	at org.eclipse.ltk.core.refactoring.PerformChangeOperation.run(PerformChangeOperation.java:219)
+	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2295)
+	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2322)
+	at org.eclipse.ltk.internal.ui.refactoring.WorkbenchRunnableAdapter.run(WorkbenchRunnableAdapter.java:89)
+	at org.eclipse.jface.operation.ModalContext$ModalContextThread.run(ModalContext.java:122)
+Contains: Could not delete '/Jsp19.hw/src'.
+org.eclipse.core.internal.resources.ResourceException: Problems encountered while deleting resources.
+	at org.eclipse.core.internal.localstore.FileSystemResourceManager.delete(FileSystemResourceManager.java:367)
+	at org.eclipse.core.internal.resources.ResourceTree.internalDeleteFolder(ResourceTree.java:361)
+	at org.eclipse.core.internal.resources.ResourceTree.internalDeleteProject(ResourceTree.java:396)
+	at org.eclipse.core.internal.resources.ResourceTree.standardDeleteProject(ResourceTree.java:853)
+	at org.eclipse.core.internal.resources.Resource.unprotectedDelete(Resource.java:1775)
+	at org.eclipse.core.internal.resources.Resource.delete(Resource.java:752)
+	at org.eclipse.core.internal.resources.Project.delete(Project.java:322)
+	at org.eclipse.ltk.core.refactoring.resource.DeleteResourceChange.perform(DeleteResourceChange.java:158)
+	at org.eclipse.ltk.core.refactoring.CompositeChange.perform(CompositeChange.java:283)
+	at org.eclipse.ltk.core.refactoring.CompositeChange.perform(CompositeChange.java:283)
+	at org.eclipse.ltk.core.refactoring.PerformChangeOperation$1.run(PerformChangeOperation.java:260)
+	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2295)
+	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2322)
+	at org.eclipse.ltk.core.refactoring.PerformChangeOperation.executeChange(PerformChangeOperation.java:308)
+	at org.eclipse.ltk.internal.ui.refactoring.UIPerformChangeOperation.executeChange(UIPerformChangeOperation.java:99)
+	at org.eclipse.ltk.core.refactoring.PerformChangeOperation.run(PerformChangeOperation.java:219)
+	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2295)
+	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2322)
+	at org.eclipse.ltk.internal.ui.refactoring.WorkbenchRunnableAdapter.run(WorkbenchRunnableAdapter.java:89)
+	at org.eclipse.jface.operation.ModalContext$ModalContextThread.run(ModalContext.java:122)
+Contains: Problems encountered while deleting files.
+Contains: Could not delete: D:\hajin301\web\Jsp19.hw\src\com.
+java.nio.file.DirectoryNotEmptyException: D:\hajin301\web\Jsp19.hw\src\com
+	at sun.nio.fs.WindowsFileSystemProvider.implDelete(WindowsFileSystemProvider.java:266)
+	at sun.nio.fs.AbstractFileSystemProvider.deleteIfExists(AbstractFileSystemProvider.java:108)
+	at java.nio.file.Files.deleteIfExists(Files.java:1165)
+	at org.eclipse.core.internal.filesystem.local.LocalFile.internalDelete(LocalFile.java:256)
+	at org.eclipse.core.internal.filesystem.local.LocalFile.internalDelete(LocalFile.java:251)
+	at org.eclipse.core.internal.filesystem.local.LocalFile.delete(LocalFile.java:140)
+	at org.eclipse.core.internal.localstore.DeleteVisitor.delete(DeleteVisitor.java:66)
+	at org.eclipse.core.internal.localstore.DeleteVisitor.visit(DeleteVisitor.java:154)
+	at org.eclipse.core.internal.localstore.UnifiedTree.accept(UnifiedTree.java:118)
+	at org.eclipse.core.internal.localstore.FileSystemResourceManager.delete(FileSystemResourceManager.java:364)
+	at org.eclipse.core.internal.resources.ResourceTree.internalDeleteFolder(ResourceTree.java:361)
+	at org.eclipse.core.internal.resources.ResourceTree.internalDeleteProject(ResourceTree.java:396)
+	at org.eclipse.core.internal.resources.ResourceTree.standardDeleteProject(ResourceTree.java:853)
+	at org.eclipse.core.internal.resources.Resource.unprotectedDelete(Resource.java:1775)
+	at org.eclipse.core.internal.resources.Resource.delete(Resource.java:752)
+	at org.eclipse.core.internal.resources.Project.delete(Project.java:322)
+	at org.eclipse.ltk.core.refactoring.resource.DeleteResourceChange.perform(DeleteResourceChange.java:158)
+	at org.eclipse.ltk.core.refactoring.CompositeChange.perform(CompositeChange.java:283)
+	at org.eclipse.ltk.core.refactoring.CompositeChange.perform(CompositeChange.java:283)
+	at org.eclipse.ltk.core.refactoring.PerformChangeOperation$1.run(PerformChangeOperation.java:260)
+	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2295)
+	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2322)
+	at org.eclipse.ltk.core.refactoring.PerformChangeOperation.executeChange(PerformChangeOperation.java:308)
+	at org.eclipse.ltk.internal.ui.refactoring.UIPerformChangeOperation.executeChange(UIPerformChangeOperation.java:99)
+	at org.eclipse.ltk.core.refactoring.PerformChangeOperation.run(PerformChangeOperation.java:219)
+	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2295)
+	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2322)
+	at org.eclipse.ltk.internal.ui.refactoring.WorkbenchRunnableAdapter.run(WorkbenchRunnableAdapter.java:89)
+	at org.eclipse.jface.operation.ModalContext$ModalContextThread.run(ModalContext.java:122)
+Contains: Could not delete: D:\hajin301\web\Jsp19.hw\src.
+Contains: Could not delete 'D:\hajin301\web\Jsp19.hw'.
+!SUBENTRY 1 org.eclipse.core.resources 4 273 2019-03-07 17:25:44.686
+!MESSAGE Problems encountered while deleting resources.
+!SUBENTRY 2 org.eclipse.core.resources 4 273 2019-03-07 17:25:44.686
+!MESSAGE Could not delete '/Jsp19.hw/src'.
+!STACK 1
+org.eclipse.core.internal.resources.ResourceException: Problems encountered while deleting resources.
+	at org.eclipse.core.internal.localstore.FileSystemResourceManager.delete(FileSystemResourceManager.java:367)
+	at org.eclipse.core.internal.resources.ResourceTree.internalDeleteFolder(ResourceTree.java:361)
+	at org.eclipse.core.internal.resources.ResourceTree.internalDeleteProject(ResourceTree.java:396)
+	at org.eclipse.core.internal.resources.ResourceTree.standardDeleteProject(ResourceTree.java:853)
+	at org.eclipse.core.internal.resources.Resource.unprotectedDelete(Resource.java:1775)
+	at org.eclipse.core.internal.resources.Resource.delete(Resource.java:752)
+	at org.eclipse.core.internal.resources.Project.delete(Project.java:322)
+	at org.eclipse.ltk.core.refactoring.resource.DeleteResourceChange.perform(DeleteResourceChange.java:158)
+	at org.eclipse.ltk.core.refactoring.CompositeChange.perform(CompositeChange.java:283)
+	at org.eclipse.ltk.core.refactoring.CompositeChange.perform(CompositeChange.java:283)
+	at org.eclipse.ltk.core.refactoring.PerformChangeOperation$1.run(PerformChangeOperation.java:260)
+	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2295)
+	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2322)
+	at org.eclipse.ltk.core.refactoring.PerformChangeOperation.executeChange(PerformChangeOperation.java:308)
+	at org.eclipse.ltk.internal.ui.refactoring.UIPerformChangeOperation.executeChange(UIPerformChangeOperation.java:99)
+	at org.eclipse.ltk.core.refactoring.PerformChangeOperation.run(PerformChangeOperation.java:219)
+	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2295)
+	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2322)
+	at org.eclipse.ltk.internal.ui.refactoring.WorkbenchRunnableAdapter.run(WorkbenchRunnableAdapter.java:89)
+	at org.eclipse.jface.operation.ModalContext$ModalContextThread.run(ModalContext.java:122)
+Contains: Problems encountered while deleting files.
+Contains: Could not delete: D:\hajin301\web\Jsp19.hw\src\com.
+java.nio.file.DirectoryNotEmptyException: D:\hajin301\web\Jsp19.hw\src\com
+	at sun.nio.fs.WindowsFileSystemProvider.implDelete(WindowsFileSystemProvider.java:266)
+	at sun.nio.fs.AbstractFileSystemProvider.deleteIfExists(AbstractFileSystemProvider.java:108)
+	at java.nio.file.Files.deleteIfExists(Files.java:1165)
+	at org.eclipse.core.internal.filesystem.local.LocalFile.internalDelete(LocalFile.java:256)
+	at org.eclipse.core.internal.filesystem.local.LocalFile.internalDelete(LocalFile.java:251)
+	at org.eclipse.core.internal.filesystem.local.LocalFile.delete(LocalFile.java:140)
+	at org.eclipse.core.internal.localstore.DeleteVisitor.delete(DeleteVisitor.java:66)
+	at org.eclipse.core.internal.localstore.DeleteVisitor.visit(DeleteVisitor.java:154)
+	at org.eclipse.core.internal.localstore.UnifiedTree.accept(UnifiedTree.java:118)
+	at org.eclipse.core.internal.localstore.FileSystemResourceManager.delete(FileSystemResourceManager.java:364)
+	at org.eclipse.core.internal.resources.ResourceTree.internalDeleteFolder(ResourceTree.java:361)
+	at org.eclipse.core.internal.resources.ResourceTree.internalDeleteProject(ResourceTree.java:396)
+	at org.eclipse.core.internal.resources.ResourceTree.standardDeleteProject(ResourceTree.java:853)
+	at org.eclipse.core.internal.resources.Resource.unprotectedDelete(Resource.java:1775)
+	at org.eclipse.core.internal.resources.Resource.delete(Resource.java:752)
+	at org.eclipse.core.internal.resources.Project.delete(Project.java:322)
+	at org.eclipse.ltk.core.refactoring.resource.DeleteResourceChange.perform(DeleteResourceChange.java:158)
+	at org.eclipse.ltk.core.refactoring.CompositeChange.perform(CompositeChange.java:283)
+	at org.eclipse.ltk.core.refactoring.CompositeChange.perform(CompositeChange.java:283)
+	at org.eclipse.ltk.core.refactoring.PerformChangeOperation$1.run(PerformChangeOperation.java:260)
+	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2295)
+	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2322)
+	at org.eclipse.ltk.core.refactoring.PerformChangeOperation.executeChange(PerformChangeOperation.java:308)
+	at org.eclipse.ltk.internal.ui.refactoring.UIPerformChangeOperation.executeChange(UIPerformChangeOperation.java:99)
+	at org.eclipse.ltk.core.refactoring.PerformChangeOperation.run(PerformChangeOperation.java:219)
+	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2295)
+	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2322)
+	at org.eclipse.ltk.internal.ui.refactoring.WorkbenchRunnableAdapter.run(WorkbenchRunnableAdapter.java:89)
+	at org.eclipse.jface.operation.ModalContext$ModalContextThread.run(ModalContext.java:122)
+Contains: Could not delete: D:\hajin301\web\Jsp19.hw\src.
+!SUBENTRY 3 org.eclipse.core.resources 4 273 2019-03-07 17:25:44.686
+!MESSAGE Problems encountered while deleting resources.
+!SUBENTRY 4 org.eclipse.core.filesystem 4 273 2019-03-07 17:25:44.686
+!MESSAGE Problems encountered while deleting files.
+!SUBENTRY 5 org.eclipse.core.filesystem 4 273 2019-03-07 17:25:44.686
+!MESSAGE Could not delete: D:\hajin301\web\Jsp19.hw\src\com.
+!STACK 0
+java.nio.file.DirectoryNotEmptyException: D:\hajin301\web\Jsp19.hw\src\com
+	at sun.nio.fs.WindowsFileSystemProvider.implDelete(WindowsFileSystemProvider.java:266)
+	at sun.nio.fs.AbstractFileSystemProvider.deleteIfExists(AbstractFileSystemProvider.java:108)
+	at java.nio.file.Files.deleteIfExists(Files.java:1165)
+	at org.eclipse.core.internal.filesystem.local.LocalFile.internalDelete(LocalFile.java:256)
+	at org.eclipse.core.internal.filesystem.local.LocalFile.internalDelete(LocalFile.java:251)
+	at org.eclipse.core.internal.filesystem.local.LocalFile.delete(LocalFile.java:140)
+	at org.eclipse.core.internal.localstore.DeleteVisitor.delete(DeleteVisitor.java:66)
+	at org.eclipse.core.internal.localstore.DeleteVisitor.visit(DeleteVisitor.java:154)
+	at org.eclipse.core.internal.localstore.UnifiedTree.accept(UnifiedTree.java:118)
+	at org.eclipse.core.internal.localstore.FileSystemResourceManager.delete(FileSystemResourceManager.java:364)
+	at org.eclipse.core.internal.resources.ResourceTree.internalDeleteFolder(ResourceTree.java:361)
+	at org.eclipse.core.internal.resources.ResourceTree.internalDeleteProject(ResourceTree.java:396)
+	at org.eclipse.core.internal.resources.ResourceTree.standardDeleteProject(ResourceTree.java:853)
+	at org.eclipse.core.internal.resources.Resource.unprotectedDelete(Resource.java:1775)
+	at org.eclipse.core.internal.resources.Resource.delete(Resource.java:752)
+	at org.eclipse.core.internal.resources.Project.delete(Project.java:322)
+	at org.eclipse.ltk.core.refactoring.resource.DeleteResourceChange.perform(DeleteResourceChange.java:158)
+	at org.eclipse.ltk.core.refactoring.CompositeChange.perform(CompositeChange.java:283)
+	at org.eclipse.ltk.core.refactoring.CompositeChange.perform(CompositeChange.java:283)
+	at org.eclipse.ltk.core.refactoring.PerformChangeOperation$1.run(PerformChangeOperation.java:260)
+	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2295)
+	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2322)
+	at org.eclipse.ltk.core.refactoring.PerformChangeOperation.executeChange(PerformChangeOperation.java:308)
+	at org.eclipse.ltk.internal.ui.refactoring.UIPerformChangeOperation.executeChange(UIPerformChangeOperation.java:99)
+	at org.eclipse.ltk.core.refactoring.PerformChangeOperation.run(PerformChangeOperation.java:219)
+	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2295)
+	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2322)
+	at org.eclipse.ltk.internal.ui.refactoring.WorkbenchRunnableAdapter.run(WorkbenchRunnableAdapter.java:89)
+	at org.eclipse.jface.operation.ModalContext$ModalContextThread.run(ModalContext.java:122)
+!SUBENTRY 5 org.eclipse.core.filesystem 4 273 2019-03-07 17:25:44.686
+!MESSAGE Could not delete: D:\hajin301\web\Jsp19.hw\src.
+!SUBENTRY 2 org.eclipse.core.resources 4 273 2019-03-07 17:25:44.687
+!MESSAGE Could not delete 'D:\hajin301\web\Jsp19.hw'.
+
+!ENTRY org.eclipse.egit.core 4 0 2019-03-07 17:25:47.484
+!MESSAGE Git team provider configuration has gone missing.
+!STACK 0
+java.io.FileNotFoundException: D:\hajin301\web\.metadata\.plugins\org.eclipse.core.resources\.projects\Jsp19.hw\org.eclipse.egit.core\GitProjectData.properties (지정된 파일을 찾을 수 없습니다)
+	at java.io.FileInputStream.open0(Native Method)
+	at java.io.FileInputStream.open(FileInputStream.java:195)
+	at java.io.FileInputStream.<init>(FileInputStream.java:138)
+	at org.eclipse.egit.core.project.GitProjectData.load(GitProjectData.java:623)
+	at org.eclipse.egit.core.project.GitProjectData.get(GitProjectData.java:221)
+	at org.eclipse.egit.core.internal.indexdiff.GitResourceDeltaVisitor.visit(GitResourceDeltaVisitor.java:117)
+	at org.eclipse.core.internal.events.ResourceDelta.accept(ResourceDelta.java:67)
+	at org.eclipse.core.internal.events.ResourceDelta.accept(ResourceDelta.java:77)
+	at org.eclipse.core.internal.events.ResourceDelta.accept(ResourceDelta.java:51)
+	at org.eclipse.egit.core.internal.indexdiff.IndexDiffCacheEntry$6.resourceChanged(IndexDiffCacheEntry.java:740)
+	at org.eclipse.core.internal.events.NotificationManager$1.run(NotificationManager.java:300)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45)
+	at org.eclipse.core.internal.events.NotificationManager.notify(NotificationManager.java:290)
+	at org.eclipse.core.internal.events.NotificationManager.broadcastChanges(NotificationManager.java:153)
+	at org.eclipse.core.internal.resources.Workspace.broadcastPostChange(Workspace.java:379)
+	at org.eclipse.core.internal.resources.Workspace.endOperation(Workspace.java:1502)
+	at org.eclipse.core.internal.resources.InternalWorkspaceJob.run(InternalWorkspaceJob.java:49)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)

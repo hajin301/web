@@ -149,7 +149,7 @@
              Note: The pattern used is equivalent to using pattern="common" -->
         <Valve className="org.apache.catalina.valves.AccessLogValve" directory="logs" pattern="%h %l %u %t &quot;%r&quot; %s %b" prefix="localhost_access_log" suffix=".txt"/>
 
-      <Context docBase="Jsp11" path="/Jsp11" reloadable="true" source="org.eclipse.jst.jee.server:Jsp11"/><Context docBase="Jsp05" path="/Jsp05" reloadable="true" source="org.eclipse.jst.jee.server:Jsp05"/><Context docBase="Jsp11_1" path="/Jsp11_1" reloadable="true" source="org.eclipse.jst.jee.server:Jsp11_1"/><Context docBase="Jsp11_2" path="/Jsp11_2" reloadable="true" source="org.eclipse.jst.jee.server:Jsp11_2"/><Context docBase="Jsp12" path="/Jsp12" reloadable="true" source="org.eclipse.jst.jee.server:Jsp12"/><Context docBase="Jsp12_2" path="/Jsp12_2" reloadable="true" source="org.eclipse.jst.jee.server:Jsp12_2"/><Context docBase="Jsp13" path="/Jsp13" reloadable="true" source="org.eclipse.jst.jee.server:Jsp13"/></Host>
+      <Context docBase="Jsp19.hw" path="/Jsp19" reloadable="true" source="org.eclipse.jst.jee.server:Jsp19.hw"/><Context docBase="Jsp18.Database" path="/Jsp18" reloadable="true" source="org.eclipse.jst.jee.server:Jsp18.Database"/><Context docBase="Jsp19_HW" path="/Jsp19_HW" reloadable="true" source="org.eclipse.jst.jee.server:Jsp19_HW"/></Host>
     </Engine>
   </Service>
 </Server>
