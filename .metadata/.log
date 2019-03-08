@@ -8247,3 +8247,9 @@ java.lang.IllegalArgumentException: can not get a buffer without a document refe
 !MESSAGE Could not publish server configuration for Tomcat v8.5 Server at localhost.
 !SUBENTRY 1 org.eclipse.jst.server.tomcat.core 4 0 2019-03-08 16:09:48.400
 !MESSAGE Multiple Contexts have a path of "/Jsp21".
+
+!ENTRY org.eclipse.jface.text 2 0 2019-03-08 16:21:15.465
+!MESSAGE Duplicate template id: 'org.eclipse.wst.xslt.templates.xpath.boolean'
+
+!ENTRY org.eclipse.jface.text 2 0 2019-03-08 16:31:39.893
+!MESSAGE Duplicate template id: 'org.eclipse.wst.xslt.templates.xpath.boolean'
