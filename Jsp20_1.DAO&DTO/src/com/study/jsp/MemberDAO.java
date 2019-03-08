@@ -2,6 +2,7 @@ package com.study.jsp;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
+import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.Statement;
 import java.util.ArrayList;
@@ -61,5 +62,38 @@ public class MemberDAO {
 			
 			return dtos;
 		}
+		
+		
+		public int memberInsert(MemberDTO dto) {
+			Connection con = null;
+			PreparedStatement pstmt = null;
+			String query = "insert into Member1 values(?,?,?,?,?)";
+			int nResult = 0;
+			
+			try {
+				con = DriverManager.getConnection(url, uid, upw);
+				pstmt = con.prepareStatement(query);
+				pstmt.setString(1,  dto.getId());
+				pstmt.setString(2,  dto.getPw());
+				pstmt.setString(3,  dto.getName());
+				pstmt.setString(4,  dto.getPhone());
+				pstmt.setString(5,  dto.getGender());
+				pstmt.executeUpdate();
+				nResult = 1;
+			
+			}catch(Exception e) {
+				e.printStackTrace();
+			} finally {
+				try {
+					if(pstmt != null) pstmt.close();
+					if(con != null) con.close();
+				}catch (Exception e) {
+					e.printStackTrace();
+				}
+			}
+			
+			return nResult;
+		}
+		
 
 }

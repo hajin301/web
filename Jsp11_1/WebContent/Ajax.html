@@ -12,30 +12,25 @@
 	}
 	
 	function submit_ajax() {
+		
 		$.ajax({
 			url: '/requestcal1.jsp',
 			type: 'post',
 			dataType: 'text',
 			data: $('#my-form').serialize(),
+
 			error: function (xhr, status, error) {
 				alert(error);
 			},
-			success: function (data) {
-				
-				return_xml(data);
+			success: function () {
+				var num1 = $(this).find('num1').text();
+				var num2 = $(this).find('num2').text();
+				var cal = $(this).find('cal').text();
+				var result = $(this).find('result').text();
+				//출력
+				$('<h1></h1>').text(num1 + cal + num2 + '=' + result).appendTo('body');
 			}
-		});	
-	}
-	
-	function return_xml(data) {
-		$(data).find('data').each(function () {
-			var num1 = $(this).find('num1').text();
-			var num2 = $(this).find('num2').text();
-			var cal = $(this).find('cal').text();
-			var result = $(this).find('result').text();
-
-			//출력
-			$('<h1></h1>').text(num1 + cal + num2 + '=' + result).appendTo('body')
+			
 		});
 	}
 	

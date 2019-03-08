@@ -10,7 +10,8 @@
 <title>Insert title here</title>
 </head>
 <body>
-<% MemberDAO memberDAO = new MemberDAO();
+<%
+	MemberDAO memberDAO = new MemberDAO();
    ArrayList<MemberDTO> dtos = memberDAO.memberSelect();
    
    for(int i = 0; i < dtos.size(); i++) {
@@ -22,10 +23,10 @@
 	   String gender = dto.getGender();
 	   
 	   out.println("아이디 : " + id +
-			       ", 비밀번호 : " + pw +
-			       ", 이름 : " + name +
-			       ", 연락처 : " + phone +
-			       ", 성별 : " + gender + "<br>");
+	       ", 비밀번호 : " + pw +
+	       ", 이름 : " + name +
+	       ", 연락처 : " + phone +
+	       ", 성별 : " + gender + "<br>");
    }
 %>
 </body>
