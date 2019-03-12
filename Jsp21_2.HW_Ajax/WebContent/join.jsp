@@ -5,70 +5,68 @@
 <head>
 <meta charset="UTF-8">
 <title>Insert title here</title>
-<script language="javaScript" src ="members.js"></script>
+<script src="http://code.jquery.com/jquery.js"></script>
 <script>
+
 function form_check() {
 	
-	if(document.reg_frm.id.value.length == 0){
+	if($('#id').val().length == 0){
 		alert("아이디는 필수사항입니다.");
-		reg_frm.id.focus();
+		$('#id').focus();
 		return;
 	}
 	
-	if(document.reg_frm.id.value.length < 4){
+	if($('#id').val().length < 4){
 		alert("아이디는 4글자 이상이어야 합니다.");
-		reg_frm.id.focus();
+		$('#id').focus();
 		return;
 	}
 	
-	if(document.reg_frm.pw.value.length == 0){
+	if($('#pw').val().length == 0){
 		alert("비밀번호는 필수사항입니다.");
-		reg_frm.pw.focus();
+		$('#pw').focus();
 		return;
 	}
 	
-	if(document.reg_frm.pw.value != document.reg_frm.pw_check.value){
+	if($('#pw').val() != $('#pw_check').val()){
 		alert("비밀번호가 일치하지 않습니다.");
-		reg_frm.pw.focus();
+		$('#pw').focus();
 		return;
 	}
 	
-	if(document.reg_frm.name.value.length == 0){
+	if($('#name').val().length == 0){
 		alert("이름은 필수사항입니다.");
-		reg_frm.name.focus();
+		$('#name').focus();
 		return;
 	}
 	
-	if(document.reg_frm.eMail.value.length == 0){
+	if($('#eMail').val().length == 0){
 		alert("메일은 필수사항입니다.");
-		reg_frm.eMail.focus();
+		$('#eMail').focus();
 		return;
 	}
 	
-	document.reg_frm.submit();
+	submit_ajax();
 }
 
-function updateInfoConfirm() {
-
-	if(document.reg_frm.pw.value == "") {
-		alert("비밀번호를 입력하세요.");
-		document.reg_frm.pw.focus();
-		return;
-	}
+function submit_ajax() {
 	
-	if(document.reg_frm.pw.value != document.reg_frm.pw_check.value){
-		alert("비밀번호가 일치하지 않습니다.");
-		reg_frm.pw.focus();
-		return;
-	}
-	
-	if(document.reg_frm.eMail.value.length == 0){
-		alert("메일은 필수사항입니다.");
-		reg_frm.eMail.focus();
-		return;
-	}
-	
-	document.reg_frm.submit();
+	var queryString = $("#reg_frm").serialize();
+	$.ajax({
+		url: 'JoinProcess',
+		type: 'POST',
+		data: queryString,
+		dataType: 'text',
+		success: function(json) {
+			var result = JSON.parse(json);
+			if(result.code == "success") {
+				alert(result.desc)
+				window.location.replace("login.jsp");
+			}else {
+				alert(result.desc);
+			}
+		}
+	});
 }
 
 </script>
@@ -85,7 +83,7 @@ function updateInfoConfirm() {
 	주소: <input type = "text" id = "address" name = "address" size = "50"> <br> <p>
 	
 	<input type ="button" value = "회원가입" onclick ="form_check()">&nbsp;&nbsp;&nbsp;
-	<input type = "reset" value = "로그인" onclick = "javascript:window.location = 'login.jsp'">
+	<input type = "button" value = "로그인" onclick = "javascript:window.location = 'login.jsp'">
 	
 </form>
 </body>
