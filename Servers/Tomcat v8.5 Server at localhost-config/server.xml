@@ -149,7 +149,7 @@
              Note: The pattern used is equivalent to using pattern="common" -->
         <Valve className="org.apache.catalina.valves.AccessLogValve" directory="logs" pattern="%h %l %u %t &quot;%r&quot; %s %b" prefix="localhost_access_log" suffix=".txt"/>
 
-      <Context docBase="Jsp25_4.Command_ajax" path="/Jsp25_4" reloadable="true" source="org.eclipse.jst.jee.server:Jsp25_4.Command_ajax"/><Context docBase="Jsp27.BBS1" path="/Jsp27.BBS1" reloadable="true" source="org.eclipse.jst.jee.server:Jsp27.BBS1"/><Context docBase="Jsp25_3.Command_Pattern" path="/Jsp25_3" reloadable="true" source="org.eclipse.jst.jee.server:Jsp25_3.Command_Pattern"/><Context docBase="Jsp21_2.HW_ajax" path="/Jsp21_2.HW_ajax" reloadable="true" source="org.eclipse.jst.jee.server:Jsp21_2.HW_ajax"/></Host>
+      <Context docBase="K_BootStrapEx" path="/K_BootStrapEx" reloadable="true" source="org.eclipse.jst.jee.server:K_BootStrapEx"/><Context docBase="Jsp27_2.BBS2" path="/Jsp27_2.BBS2" reloadable="true" source="org.eclipse.jst.jee.server:Jsp27_2.BBS2"/><Context docBase="Jsp27_1.BBS1" path="/Jsp27_1.BBS1" reloadable="true" source="org.eclipse.jst.jee.server:Jsp27_1.BBS1"/></Host>
     </Engine>
   </Service>
 </Server>
