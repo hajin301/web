@@ -87,7 +87,7 @@ public class BDao {
 			               "      from ( " +
 			               "         select * " +
 			               "            from mvc_board " +
-					       "           order by bgroup desc, bstep asc ) A " +
+					       "           order by bGroup desc, bStep asc ) A " +
 			               "       where rownum <= ? ) B " +
 					       "where B.num >= ? ";
 			
@@ -327,18 +327,20 @@ public class BDao {
 			con = dataSource.getConnection();
 			String query = "insert into mvc_board " +
 			               " (bId, bName, bTitle, bContent, bGroup, bStep, bIndent) " +
-					       " values (mvc_board7_seq.nextval, ?, ?, ?, ?, ?, ?)";
+					       " values (mvc_board_seq.nextval, ?, ?, ?, ?, ?, ?)";
 			
 			pstmt = con.prepareStatement(query);
-			
+		
 			pstmt.setString(1,  bName);
 			pstmt.setString(2,  bTitle);
 			pstmt.setString(3,  bContent);
 			pstmt.setInt(4, Integer.parseInt(bGroup));
 			pstmt.setInt(5, Integer.parseInt(bStep) + 1);
 			pstmt.setInt(6, Integer.parseInt(bIndent) +1);
+		
 			
 			int rn = pstmt.executeUpdate();
+			
 		}catch (Exception e) {
 			e.printStackTrace();
 		}finally {
@@ -360,7 +362,7 @@ public class BDao {
 			con = dataSource.getConnection();
 			
 			String query = "update mvc_board " +
-		               		"   set bStep = bStep +1 " +
+		               		"   set bStep = bStep + 1 " +
 		               		"  where bGroup = ? and bStep > ?"; 
 			
 			pstmt = con.prepareStatement(query);

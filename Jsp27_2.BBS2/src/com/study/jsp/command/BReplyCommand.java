@@ -20,7 +20,7 @@ public class BReplyCommand implements BCommand{
 		String bIndent = request.getParameter("bIndent");
 
 		
-		BDao dao = BDao.getInstance();
+		BDao dao = new BDao();
 		dao.reply(bId, bName, bTitle, bContent, bGroup, bStep, bIndent);
 		
 	}
