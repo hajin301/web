@@ -29,8 +29,9 @@
 			    	<a href = "content_view.do?bId=${dto.bId}&kind=view">${dto.bTitle }</a>
 				</td>
 				<td>${dto.bDate}</td>
-				<td>${dto.bGroup}</td> 
 				<td>${dto.bHit}</td> 
+				<td>${dto.bGroup}</td> 
+				
 			</tr>
 		</c:forEach>
 		

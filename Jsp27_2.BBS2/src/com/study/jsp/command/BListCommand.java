@@ -23,7 +23,7 @@ public class BListCommand implements BCommand {
 		}catch (Exception e) {
 		}
 		
-		BDao dao = BDao.getInstance();
+		BDao dao = new BDao();
 		BPageInfo pinfo = dao.articlePage(nPage);
 		request.setAttribute("page", pinfo);
 		
