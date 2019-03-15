@@ -149,7 +149,7 @@
              Note: The pattern used is equivalent to using pattern="common" -->
         <Valve className="org.apache.catalina.valves.AccessLogValve" directory="logs" pattern="%h %l %u %t &quot;%r&quot; %s %b" prefix="localhost_access_log" suffix=".txt"/>
 
-      <Context docBase="K_googlelogin" path="/K_googlelogin" reloadable="true" source="org.eclipse.jst.jee.server:K_googlelogin"/><Context docBase="Jsp27_2.BBS2" path="/Jsp27_2.BBS2" reloadable="true" source="org.eclipse.jst.jee.server:Jsp27_2.BBS2"/><Context docBase="K_facebook" path="/K_facebook" reloadable="true" source="org.eclipse.jst.jee.server:K_facebook"/><Context docBase="K_NaverLogin1" path="/K_NaverLogin1" reloadable="true" source="org.eclipse.jst.jee.server:K_NaverLogin1"/><Context docBase="K_KaKaoLogin" path="/K_KaKaoLogin" reloadable="true" source="org.eclipse.jst.jee.server:K_KaKaoLogin"/><Context docBase="WebSocketEx2" path="/WebSocketEx2" reloadable="true" source="org.eclipse.jst.jee.server:WebSocketEx2"/><Context docBase="Jsp27_2.BBS1" path="/Jsp27_2" reloadable="true" source="org.eclipse.jst.jee.server:Jsp27_2.BBS1"/></Host>
+      <Context docBase="WebSocketEx2" path="/WebSocketEx2" reloadable="true" source="org.eclipse.jst.jee.server:WebSocketEx2"/><Context docBase="jsp25_1.Command_ajax" path="/jsp25_1.Command_ajax" reloadable="true" source="org.eclipse.jst.jee.server:jsp25_1.Command_ajax"/></Host>
     </Engine>
   </Service>
 </Server>
