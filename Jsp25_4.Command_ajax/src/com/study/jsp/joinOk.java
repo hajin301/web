@@ -44,17 +44,18 @@ public class joinOk implements Service {
 	    String json_data="";
 	    
 	    if(dao.confirmId(dto.getId()) == MemberDAO.MEMBER_EXISTENT) {
-	    	json_data = "{\"code\": \"fail\", \"desc\" : \"아이디가 이미 존재 합니다.\" }";
+	    	System.out.println("no");
+	    	json_data = "{\"code\": \"fail\", \"desc\" : \"아이디가 이미 존재합니다.\" }";
 	    }else {
 	    	int ri = dao.insertMember(dto);
 	    	if (ri == MemberDAO.MEMBER_JOIN_SUCCESSS) {
+	    		System.out.println("yes");
 	    		session.setAttribute("id", dto.getId());
 	    		session.setAttribute("name", dto.getName());
 	    		session.setAttribute("validMem", "yes");
 	    		json_data = "{\"code\": \"success\", \"desc\" : \"회원가입을 축하 합니다.\" }";
 	    	} else {
-	    		json_data = 
-						"{\"code\": \"fail\", \"desc\" : \"에러가 발생하여 회원가입에 실패했습니다.\" }";
+	    		json_data = "{\"code\": \"fail\", \"desc\" : \"회원가입에 에러가 발생샜습니다.\" }";
 	    	}
 	    	
 	    	response.setContentType("application/json; charset=UTF-8");

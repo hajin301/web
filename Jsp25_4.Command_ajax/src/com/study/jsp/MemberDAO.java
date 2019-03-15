@@ -123,7 +123,7 @@ public class MemberDAO {
 					ri = MemberDAO.MEMBER_LOGIN_PW_NO_GOOD; // 비밀번호 x
 				}
 			}else {
-				System.out.println("login fail");
+				System.out.println("login fail2");
 				ri = MemberDAO.MEMBER_LOGIN_IS_NOT; //아이디 X
 			}
 			

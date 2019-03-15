@@ -12,7 +12,6 @@
 
 
     <a id="kakao-login-btn"></a>
-    <a href="http://developers.kakao.com/logout">로그아웃</a>
     <script type='text/javascript'>
       //<![CDATA[
         Kakao.init('497f2a63323dad7a705830079edabc9c');

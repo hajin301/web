@@ -16,9 +16,9 @@
 			return;
 		}
 		
-		if($('#id').val().length < 4) {
-			alert("아이디는 4글자 이상 입력하셔야 합니다.");
-			$('#id').focus();
+		if($('#pw').val().length < 4) {
+			alert("비밀번호는 4글자 이상 입력하셔야 합니다.");
+			$('#pw').focus();
 			return;
 		}
 		
@@ -61,11 +61,14 @@
 			success: function(json) {
 				//consle.log(json);
 				var result = JSON.parse(json);
+				
 				if(result.code == "success") {
+					//alert("성공")
 					alert(result.desc)
-				window.location.replace("login.jsp");
-				} else {
-					alert(result.desc);
+				    window.location.replace("login.jsp");
+				} else if(result.code=="fail"){
+					alert("실패")
+					//alert(result.desc);
 				}
 			}
 		});

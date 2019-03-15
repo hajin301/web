@@ -22,6 +22,7 @@ function submit_ajax() {
 				//consle.log(json);
 				var result = JSON.parse(json);
 				if(result.code == "success") {
+					//alert("성공");
 					alert(result.desc)
 					window.location.replace("main.jsp");
 				} else {

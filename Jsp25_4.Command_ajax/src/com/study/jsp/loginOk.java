@@ -38,7 +38,7 @@ public class loginOk implements Service {
 		if(dao.userCheck(id,pw) == MemberDAO.MEMBER_LOGIN_IS_NOT) {
 			json_data = "{\"code\" : \"fail\", \"desc\" : \"아이디가 존재하지 않습니다.\"}";
 	    } else if (dao.userCheck(id,pw) == MemberDAO.MEMBER_LOGIN_PW_NO_GOOD ){
-	    	json_data = "{\"code\" : \"success\", \"desc\" : \"비밀번호가 맞지 않습니다.\"}";	
+	    	json_data = "{\"code\" : \"fail\", \"desc\" : \"비밀번호가 맞지 않습니다.\"}";	
 	    } else if (dao.userCheck(id,pw) == MemberDAO.MEMBER_LOGIN_SUCCESS ){
 	    	
 	    	  MemberDTO dto = dao.getMember(id);
