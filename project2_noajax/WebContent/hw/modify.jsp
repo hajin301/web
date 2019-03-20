@@ -1,7 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
-<%@ page import = "co.study.jsp.hw.MemberDTO" %>
-<%@ page import = "co.study.jsp.hw.MemberDAO" %>
+<%@ page import = "com.study.jsp.hw.MemberDTO" %>
+<%@ page import = "com.study.jsp.hw.MemberDAO" %>
 
 <%
 	request.setCharacterEncoding("UTF-8");

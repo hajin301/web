@@ -52,13 +52,12 @@ public class loginOk implements Service {
 				 	session.setAttribute("name", name);
 				 	session.setAttribute("ValidMem", "yes");
 	    	   }
-	    	   response.setContentType("application/json); charset=UTF-8");
+	    	   response.setContentType("application/json; charset=UTF-8");
 	    	   writer.println(json_data);
 	    	   writer.close();
 				 
 	    	}
 	    }
 	}
-
 
 

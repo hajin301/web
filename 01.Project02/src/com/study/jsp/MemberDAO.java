@@ -61,7 +61,6 @@ public class MemberDAO {
 		return ri;
 	}
 	
-	
 	public int confirmId(String id) {
 		int ri = 0;
 		
@@ -116,6 +115,52 @@ public class MemberDAO {
 			if(set.next()) {
 				dbPw = set.getString("pw");
 				if(dbPw.equals(pw)) {
+					System.out.println("login ok");
+					ri = MemberDAO.MEMBER_LOGIN_SUCCESS; //로그인 ok
+				}else {
+					System.out.println("login fail");
+					ri = MemberDAO.MEMBER_LOGIN_PW_NO_GOOD; // 비밀번호 x
+				}
+			}else {
+				System.out.println("login fail");
+				ri = MemberDAO.MEMBER_LOGIN_IS_NOT; //아이디 X
+			}
+			
+		}catch (Exception e) {
+			e.printStackTrace();
+		} finally {
+			
+			try {
+				set.close();
+				pstmt.close();
+				con.close();
+			}catch(Exception e2) {
+				e2.printStackTrace();
+			}
+			
+		}
+		
+		return ri;
+	}
+	
+	public int SNS_userCheck(String id, String email) {
+		int ri = 0;
+		String eMail;
+		
+		Connection con = null;
+		PreparedStatement pstmt = null;
+		ResultSet set = null;
+		String query = "select email from members where id = ?";
+		
+		try {
+			con = getConnection();
+			pstmt = con.prepareStatement(query);
+			pstmt.setString(1,id);
+			set = pstmt.executeQuery();
+			
+			if(set.next()) {
+				eMail = set.getString("email");
+				if(eMail.equals(email)) {
 					System.out.println("login ok");
 					ri = MemberDAO.MEMBER_LOGIN_SUCCESS; //로그인 ok
 				}else {

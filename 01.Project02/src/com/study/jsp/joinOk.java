@@ -44,6 +44,7 @@ public class joinOk implements Service {
 	    String json_data="";
 	    
 	    if(dao.confirmId(dto.getId()) == MemberDAO.MEMBER_EXISTENT) {
+	    	System.out.print("이미 가입된 아이디");
 	    	json_data = "{\"code\": \"fail\", \"desc\" : \"아이디가 이미 존재 합니다.\" }";
 	    }else {
 	    	int ri = dao.insertMember(dto);
@@ -65,4 +66,3 @@ public class joinOk implements Service {
 	}
 
 }
-

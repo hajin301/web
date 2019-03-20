@@ -44,12 +44,9 @@ function signOut() {
 </head>
 <body>
 	<div id ="login" class="g-signin2" data-onsuccess="onSignIn"></div>
-	
-	<div id = "logout" style="display: none;">
-		<input type = "button" onclick="signOut();" value="로그아웃" /><br>
 		
 		<img id="upic" src=" "><br>
 		<span id="uname"></span>
-	</div>
+
 </body>
 </html>
