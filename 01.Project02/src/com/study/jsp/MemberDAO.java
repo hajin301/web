@@ -230,15 +230,14 @@ public class MemberDAO {
 		
 		Connection con = null;
 		PreparedStatement pstmt = null;
-		String query = "update members set pw = ?, eMail= ?, address = ? where id = ? ";
+		String query = "update members set eMail= ?, address = ? where id = ? ";
 		
 		try  {
 			con = getConnection();
 			pstmt = con.prepareStatement(query);
-			pstmt.setString(1,  dto.getPw());
-			pstmt.setString(2,  dto.geteMail());
-			pstmt.setString(3,  dto.getAddress());
-			pstmt.setString(4,  dto.getId());
+			pstmt.setString(1,  dto.geteMail());
+			pstmt.setString(2,  dto.getAddress());
+			pstmt.setString(3,  dto.getId());
 			ri = pstmt.executeUpdate();
 			
 		}catch(Exception e) {
@@ -255,6 +254,33 @@ public class MemberDAO {
 		
 		return ri;
 	}
+	
+	public void deleteOK(String id) {
+		
+		Connection con = null;
+		PreparedStatement pstmt = null;
+		
+		try {
+			con = getConnection();
+			String query = "delete from members where id = ?";
+			pstmt = con.prepareStatement(query);
+			pstmt.setInt(1, Integer.parseInt(id));
+	
+			int rn = pstmt.executeUpdate();
+			
+		} catch (Exception e) {
+			e.printStackTrace();
+		}finally {
+			try {
+				if (pstmt != null) pstmt.close();
+				if (con != null) con.close();
+				
+			}catch(Exception e2) {
+				e2.printStackTrace();
+			}
+		}	
+	}
+	
 	
 	private Connection getConnection() {
 		Context context = null;
@@ -274,4 +300,5 @@ public class MemberDAO {
 		
 		return con;
 	}
+	
 }

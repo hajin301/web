@@ -44,13 +44,19 @@ public class modifyOk implements Service {
 	    
 	    MemberDAO dao = MemberDAO.getInstance();
 		int ri = dao.updateMember(dto);
+		int checkNum = dao.userCheck(id, pw);
+		System.out.println(id);
+		System.out.println(pw);
 		String json_data = "";
-		
-		if (ri == 1) {
-			json_data = "{\"code\" : \"success\", \"desc\" : \"정보가 수정되었습니다.\"}";
-	    } else {
-	    	json_data = "{\"code\" : \"fail\", \"desc\" : \"정보수정에 실패했습니다.\"}"; 
-	    }
+		if(checkNum == MemberDAO.MEMBER_LOGIN_PW_NO_GOOD) {
+			System.out.println("fail");
+			json_data = "{\"code\" : \"fail\", \"desc\" : \"비밀번호를 다시 입력해 주세요.\"}";
+		}else { 
+	    	if (ri == 1) {
+	    		System.out.println("success");
+				json_data = "{\"code\" : \"success\", \"desc\" : \"정보가 수정되었습니다.\"}";
+			} 
+		}
 		
 		session.setAttribute("eMail", dto.geteMail());
 		session.setAttribute("address", dto.getAddress());

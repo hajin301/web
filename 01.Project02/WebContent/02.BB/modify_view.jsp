@@ -80,9 +80,10 @@ function file_check() {
 	  <li class="nav-item dropdown">
 	    <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">게시판</a>
 	    <div class="dropdown-menu">
-	      <a class="dropdown-item" href=>공지사항 게시판</a>
-	      <a class="dropdown-item" href="../02.BB/list.do?page=<%=session.getAttribute("cpage") %>">자유게시판</a>
-	      <a class="dropdown-item" href="#">자료실</a>
+		  <a class="dropdown-item" href="list.do">전체보기</a>
+	      <a class="dropdown-item" href="board1.do">공지사항</a>
+	      <a class="dropdown-item" href="board2.do">자유게시판</a>
+	      <a class="dropdown-item" href="board3.do">자료실</a>
 	    </div>
 	  </li>
 	</ul>
@@ -107,8 +108,18 @@ function file_check() {
 				<td>이름</td>
 				<td><%=name %> </td>
 				<%-- <td> <input type = "text" name = "bName" value="${content_view.bName }"> </td> --%>
-				
 			</tr>
+			<tr>
+			 	<td>그룹선택</td>
+				<td> 
+					<select id="menu">
+							<option>공지사항</option>
+							<option>자유게시판</option>
+							<option>자료실</option>
+					</select>
+				  </input>
+				</td>
+		    </tr>
 			<tr>
 				<td>제목</td>
 				<td> <input type = "text" name = "bTitle" value="${content_view.bTitle }"> </td>

@@ -13,6 +13,7 @@ import javax.servlet.http.HttpSession;
 import com.study.jsp.command.BContentCommand;
 import com.study.jsp.command.BDeleteCommand;
 import com.study.jsp.command.BListCommand;
+import com.study.jsp.command.BListCommand1;
 import com.study.jsp.command.BModifyCommand;
 import com.study.jsp.command.BReplyCommand;
 import com.study.jsp.command.BReplyViewCommand;
@@ -77,6 +78,10 @@ public class FrontCon extends HttpServlet {
 			else if (command.equals("/01.HW/logout.do")||command.equals("/logout.do")) {
 				logoutOk(request, response);
 			}
+			else if (command.equals("/01.HW/deleteOk.do")||command.equals("/deleteOk.do")) {
+				Service service = new deleteOk();
+				service.execute(request, response);
+			}
 
 		}else if(file.equals("/02.BB/")) {
 			//BBS 시작
@@ -95,6 +100,18 @@ public class FrontCon extends HttpServlet {
 				Service service = new BListCommand();
 				service .execute(request, response);
 				viewPage = "list.jsp";
+			}else if(command.equals("/02.BB/board1.do")||command.equals("/board1.do")) { 
+				Service service = new BListCommand1();
+				service .execute(request, response);
+				viewPage = "board1.jsp";
+			}else if(command.equals("/02.BB/board2.do")||command.equals("/board2.do")) { 
+				Service service = new BListCommand();
+				service .execute(request, response);
+				viewPage = "board2.jsp";
+			}else if(command.equals("/02.BB/board3.do")||command.equals("/board3.do")) { 
+				Service service = new BListCommand();
+				service .execute(request, response);
+				viewPage = "board3.jsp";
 			}else if(command.equals("/02.BB/content_view.do")||command.equals("/content_view.do")) {
 				Service service = new BContentCommand();
 				service.execute(request, response);

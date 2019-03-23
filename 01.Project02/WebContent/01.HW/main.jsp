@@ -62,9 +62,10 @@ color:blue;
   <li class="nav-item dropdown">
     <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">게시판</a>
     <div class="dropdown-menu">
-      <a class="dropdown-item" href=>공지사항 게시판</a>
-      <a class="dropdown-item" href="../02.BB/list.do?page=<%=session.getAttribute("cpage") %>">자유게시판</a>
-      <a class="dropdown-item" href="#">자료실</a>
+      <a class="dropdown-item" href="../02.BB/list.do">전체보기</a>
+      <a class="dropdown-item" href="../02.BB/board1.do">공지사항</a>
+      <a class="dropdown-item" href="../02.BB/board2.do">자유게시판</a>
+      <a class="dropdown-item" href="../02.BB/board3.do">자료실</a>
     </div>
   </li>
 </ul>

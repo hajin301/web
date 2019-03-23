@@ -7,7 +7,6 @@
 	id = (String)session.getAttribute("id");
 %>
 
-
 <!DOCTYPE html>
 <html>
 <head>
@@ -31,9 +30,7 @@ margin:0px auto;
 #name {
 display:none;
 }
-#IdOk{
-display:none;
-}
+
 </style>
 
 <!-- <Script>
@@ -54,8 +51,19 @@ $(document).ready(function() {
 });
 </script> -->
 
+<script>
+	function doDisplay() {
+		var id = $('#id').val();
+		var idck = $('#idck').val();
+		if(id == idck) {	
+			$('#IdOk').css('display','block');
+			$('#IdNo').css('display','none');
+		} 
+	}
+</script>
 </head>
-<body>
+
+<body onload="doDisplay()">
 <div id="name">
 <p><span><%= name %></span> 님 안녕하세요.<p>
 </div>
@@ -78,9 +86,10 @@ $(document).ready(function() {
   <li class="nav-item dropdown">
     <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">게시판</a>
     <div class="dropdown-menu">
-      <a class="dropdown-item" href=>공지사항 게시판</a>
-      <a class="dropdown-item" href="../02.BB/list.do?page=<%=session.getAttribute("cpage") %>">자유게시판</a>
-      <a class="dropdown-item" href="#">자료실</a>
+      <a class="dropdown-item" href="list.do">전체보기</a>
+      <a class="dropdown-item" href="board1.do">공지사항</a>
+      <a class="dropdown-item" href="board2.do">자유게시판</a>
+      <a class="dropdown-item" href="board3.do">자료실</a>
     </div>
   </li>
 </ul>
@@ -115,7 +124,7 @@ $(document).ready(function() {
 			}
 		}  */
 		
-		window.onload = function() {
+/* 		window.onload = function() {
 			var id = $('#id').val();
 			var idck = $('#idck').val();
 			if(id == idck) {
@@ -128,8 +137,8 @@ $(document).ready(function() {
 				alert(idck);
 				alert('2');
 		    }
-		}
-		
+		} */
+				
 		</script>
 		<tr>
 			<td>번호</td>
@@ -171,8 +180,8 @@ $(document).ready(function() {
 		    } */
 		</script>
 		
- 		<td colspan="2" class="toggle_layer">
- 			<div id ="IdOk">	
+ 		<td colspan="2" >
+ 			<div id ="IdOk" style="display:none">	
  				<a href = "modify_view.do?bId=${content_view.bId}&kind=Bmodify">수정</a> &nbsp;&nbsp;
 				<a href = "list.do?page=<%=session.getAttribute("cpage") %>">목록보기</a> &nbsp;&nbsp;
 				<a href = "delete.do?bId=${content_view.bId}">삭제</a> &nbsp;&nbsp;
@@ -182,8 +191,7 @@ $(document).ready(function() {
  				<a href = "list.do?page=<%=session.getAttribute("cpage") %>">목록보기</a> &nbsp;&nbsp;
 				<a href = "reply_view.do?bId=${content_view.bId}">답변</a>
  			</div>
- 			
-				
+ 					
 		</td>  	
 		</tr>
 	</table>

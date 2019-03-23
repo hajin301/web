@@ -13,13 +13,14 @@ public class BDto {
 	int bStep;
 	int bIndent;
 	String Id;
+	String bMenu;
 	
 	public BDto() {
 		
 	}
 
 	public BDto(int bId, String bName, String bTitle, String bContent, 
-			Timestamp bDate, int bHit, int bGroup, int bStep, int bIndent, String Id) 
+			Timestamp bDate, int bHit, int bGroup, int bStep, int bIndent, String Id, String bMenu) 
 	 {
 		this.bId = bId;
 		this.bName = bName;
@@ -31,6 +32,7 @@ public class BDto {
 		this.bStep = bStep;
 		this.bIndent = bIndent;
 		this.Id = Id;
+		this.bMenu = bMenu;
 	}
 
 	public int getbId() {
@@ -113,6 +115,14 @@ public class BDto {
 
 	public void setId(String Id) {
 		this.Id = Id;
+	}
+	
+	public String bMenu() {
+		return bMenu;
+	}
+
+	public void bMenu(String bMenu) {
+		this.bMenu = bMenu;
 	}
 	
 }

@@ -73,16 +73,17 @@ display:none;
   <li class="nav-item dropdown">
     <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">게시판</a>
     <div class="dropdown-menu">
-      <a class="dropdown-item" href=>공지사항 게시판</a>
-      <a class="dropdown-item" href="list.do?page=<%=session.getAttribute("cpage") %>">자유게시판</a>
-      <a class="dropdown-item" href="#">자료실</a>
+           <a class="dropdown-item" href="list.do">전체보기</a>
+      <a class="dropdown-item" href="board1.do">공지사항</a>
+      <a class="dropdown-item" href="board2.do">자유게시판</a>
+      <a class="dropdown-item" href="board3.do">자료실</a>
     </div>
   </li>
 </ul>
 
 
 <nav class="navbar navbar-light bg-light">
-  <a class="navbar-brand">자유게시판</a>
+  <a class="navbar-brand">전체보기</a>
   <form class="form-inline">
     <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
     <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>

@@ -33,6 +33,9 @@ color:blue;
 #tb {
 margin:0px auto;
 }
+li {
+none;
+}
 </style>
 <script>
 function form_check() {
@@ -85,7 +88,27 @@ function file_check() {
 	 $('#login1').css('display', 'none');
 	 $('#modify1').css('display', 'block');
 } */
-	
+
+</script>
+
+<script language="javascript">
+/* function MenuList() {
+ 	var Field = $("#Menu:selected").val();
+	alert(Field); 
+	var sh = document.getElementById("Menu");
+	alert(sh);
+} */ 
+$(function(){
+	$(document).ready(function(){
+		$('select[name=Menu]').change(function(){
+			$('#bMenu').val($(this).val());
+			$('#bMenu').attr("readonly", true);
+			var sh=$('#bMenu').val($(this).val());
+			//alert(sh);
+		});
+	});
+});
+
 </script>
 
 </head>
@@ -124,9 +147,10 @@ function file_check() {
   <li class="nav-item dropdown">
     <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">게시판</a>
     <div class="dropdown-menu">
-      <a class="dropdown-item" href=>공지사항 게시판</a>
-      <a class="dropdown-item" href="../02.BB/list.do?page=<%=session.getAttribute("cpage") %>">자유게시판</a>
-      <a class="dropdown-item" href="#">자료실</a>
+          <a class="dropdown-item" href="list.do">전체보기</a>
+      <a class="dropdown-item" href="board1.do">공지사항</a>
+      <a class="dropdown-item" href="board2.do">자유게시판</a>
+      <a class="dropdown-item" href="board3.do">자료실</a>
     </div>
   </li>
 </ul>
@@ -139,14 +163,24 @@ function file_check() {
 		<input type="hidden" name="bId" value="${write_view.bId}">
 		<input type="hidden" name="bGroup" value="${write_view.bGroup}">
 		<input type="hidden" name="bName" value=<%=name %>>
-	    <input type="hidden" name="Id" value="<%=id %>">
-				
+	    <input type="hidden" name="Id" value="<%=id %>">				
 		<tr>
 			<td>이름</td>
 			<td><%=name%></td>
 			<%-- <td><input type = "text" id="bName" name="bName"  size="50" value=<%=name%>></td> --%>
 		</tr> 
-		
+		<tr>
+		 	<td>그룹선택</td>
+			<td> 
+			<input type="text" id="bMenu" name="bMenu" size="30" value="자유게시판">
+				<select id="Menu" name="Menu" onchange="MenuList()">
+						<option value="공지사항">공지사항</option>
+						<option value ="자유게시판" selected="selected">자유게시판</option>
+						<option value="자료실">자료실</option>
+				</select>
+			  </input>
+			</td>
+		</tr>
 		<tr>
 			<td>제목</td>
 			<td> <input type = "text" id="bTitle" name = "bTitle" size = "50"> </td>
