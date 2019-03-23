@@ -8,13 +8,13 @@
 
 <style>
 #join_form {
-margin:0px auto; margin-top:40px;
+margin:0px auto; margin-top:40px; margin-left:350px;
 }
 .test2{
  margin: 50px
 }
 .test2 input{
- width:400px; background-color:red; border:0px; margin-left:300px;
+ width:400px; background-color:red; border:0px;
 }
 #join_form input {
 margin-top:15px;
@@ -113,7 +113,7 @@ margin-top:15px;
 	<input type = "reset" value = "로그인" onclick = "javascript:window.location = 'login.jsp'">
 	
     <div class="container test2">
-	<input type = "button" class="btn btn-primary" value = "   구글계정으로 로그인   "  onclick="javascript:window.location = '../01.googlelogin.jsp'">
+	<input type = "button" class="btn btn-primary" value = "   구글계정으로 로그인   "  onclick="javascript:window.location = '../01.googleJoin.jsp'">
 	<input type = "button" class="btn btn-primary" value = "  카카오계정으로 로그인 "> 
 	<input type = "button" class="btn btn-primary" value = "  네이버계정으로 로그인 "> 
     <input type = "button" class="btn btn-primary" value = "페이스북계정으로 로그인">

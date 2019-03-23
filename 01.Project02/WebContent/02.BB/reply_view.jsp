@@ -6,7 +6,6 @@ if(session.getAttribute("ValidMem") == null) {
 %>
 <%-- <jsp:forward page = "../01.HW/login.jsp" /> --%>
 
- 
 <%
 }
 
@@ -94,18 +93,21 @@ margin:0px auto;
 		<input type="hidden" name="bGroup" value="${reply_view.bGroup}">
 		<input type="hidden" name="bStep" value="${reply_view.bStep}">
 		<input type="hidden" name="bIndent" value="${reply_view.bIndent}">
+		<input type="hidden" name="bName" value=<%=name %>>
+		<input type="hidden" name="Id" value="<%=id %>">
 		
 		<tr>
 			<td>번호</td>
 			<td>${reply_view.bId}</td>
 		</tr>
 		<tr>
-			<td>히트</td>
+			<td>조회수</td>
 			<td>${reply_view.bHit}</td>
 		</tr>
 		<tr>
 			<td>이름</td>
-			<td><input type = "text" name="bName" value=<%=name %> ></td>
+			<td><%=name %> </td>
+			<%-- <td><input type = "text" name="bName" value=<%=name %> ></td> --%>
 		</tr>
 		<tr>
 			<td>제목</td>

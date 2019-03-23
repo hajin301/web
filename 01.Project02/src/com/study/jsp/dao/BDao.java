@@ -37,21 +37,22 @@ public class BDao {
 		}
 	}
 	
-	public void write(String bName, String bTitle, String bContent ) {
+	public void write(String bName, String bTitle, String bContent, String Id ) {
 		Connection con = null;
 		PreparedStatement pstmt = null;
 		
 		try {
 			con = dataSource.getConnection();
 			String query = "insert into mvc_board " +
-			               " (bId, bName, bTitle, bContent, bHit, bGroup, bStep, bIndent) " +
+			               " (bId, bName, bTitle, bContent, bHit, bGroup, bStep, bIndent, Id) " +
 					       " values " +
-			               " (mvc_board_seq.nextval, ?, ?, ?, 0, mvc_board_seq.currval, 0, 0 )";
+			               " (mvc_board_seq.nextval, ?, ?, ?, 0, mvc_board_seq.currval, 0, 0, ? )";
 			
 			pstmt = con.prepareStatement(query);
 			pstmt.setString(1,  bName);
 			pstmt.setString(2,  bTitle);
 			pstmt.setString(3,  bContent);
+			pstmt.setString(4,  Id);
 			int rn = pstmt.executeUpdate();
 		
 		}catch (Exception e) {
@@ -105,9 +106,10 @@ public class BDao {
 				int bGroup = resultSet.getInt("bGroup");
 				int bStep = resultSet.getInt("bStep");
 				int bIndent = resultSet.getInt("bIndent");
+				String Id = resultSet.getString("Id");
 				
 				BDto dto = new BDto(bId, bName, bTitle, bContent, bDate,
-						            bHit, bGroup, bStep, bIndent);
+						            bHit, bGroup, bStep, bIndent, Id);
 				
 				dtos.add(dto);
 				
@@ -160,9 +162,10 @@ public class BDao {
 				int bGroup = resultSet.getInt("bGroup");
 				int bStep = resultSet.getInt("bStep");
 				int bIndent = resultSet.getInt("bIndent");
+				String Id = resultSet.getString("Id");
 				
 				dto = new BDto(bId, bName, bTitle, bContent, bDate,
-					       bHit, bGroup, bStep, bIndent);
+					       bHit, bGroup, bStep, bIndent, Id);
 			}
 			
 			
@@ -293,9 +296,10 @@ public class BDao {
 				int bGroup = resultSet.getInt("bGroup");
 				int bStep = resultSet.getInt("bStep");
 				int bIndent = resultSet.getInt("bIndent");
+				String Id = resultSet.getString("Id");
 				
 				dto = new BDto(bId, bName, bTitle, bContent, bDate,
-						       bHit, bGroup, bStep, bIndent);
+						       bHit, bGroup, bStep, bIndent, Id);
 			}
 		}catch(Exception e) {
 			e.printStackTrace();
@@ -315,7 +319,7 @@ public class BDao {
 	}
 	
 	public void reply(String bId, String bName, String bTitle, String bContent, 
-			String bGroup, String bStep, String bIndent)
+			String bGroup, String bStep, String bIndent, String Id)
 	{
 		replyShape(bGroup, bStep);
 		
@@ -325,8 +329,8 @@ public class BDao {
 		try {
 			con = dataSource.getConnection();
 			String query = "insert into mvc_board " +
-			               " (bId, bName, bTitle, bContent, bGroup, bStep, bIndent) " +
-					       " values (mvc_board_seq.nextval, ?, ?, ?, ?, ?, ?)";
+			               " (bId, bName, bTitle, bContent, bGroup, bStep, bIndent, Id) " +
+					       " values (mvc_board_seq.nextval, ?, ?, ?, ?, ?, ?, ?)";
 			
 			pstmt = con.prepareStatement(query);
 		
@@ -336,6 +340,7 @@ public class BDao {
 			pstmt.setInt(4, Integer.parseInt(bGroup));
 			pstmt.setInt(5, Integer.parseInt(bStep) + 1);
 			pstmt.setInt(6, Integer.parseInt(bIndent) +1);
+			pstmt.setString(7,  Id);
 		
 			
 			int rn = pstmt.executeUpdate();

@@ -14,9 +14,9 @@ public class BWriteCommand implements Service {
 		String bName = request.getParameter("bName");
 		String bTitle = request.getParameter("bTitle");
 		String bContent = request.getParameter("bContent");
-		
+		String Id = request.getParameter("Id");
 		BDao dao = new BDao();
-		dao.write(bName, bTitle, bContent);
+		dao.write(bName, bTitle, bContent, Id);
 		
 		
 	}

@@ -12,7 +12,7 @@
 
 
 <script>
-function onSignIn(googleUser) {
+function join(googleUser) {
 	var profile = googleUser.getBasicProfile();
 	  console.log('ID: ' + profile.getId()); // Do not send to your backend! Use an ID token instead.
 	  console.log('Name: ' + profile.getName());
@@ -22,18 +22,21 @@ function onSignIn(googleUser) {
   $('#SEmail').html('<input type = "hidden" name = "SEmail" id = "SEmail" value =' + profile.getEmail() + '>');
   $('#SId').html('<input type = "hidden" name = "SId" id = "SId" value =' + profile.getId() + '>');
   
-  document.reg_frm.submit();
+  document.join_frm.submit();
 }
+
 
 </script>
 
 </head>
 <body>
-     <form action = "SNS_joinOk.do" method = "post" name = "reg_frm">
-		<div id ="login" class="g-signin2" data-onsuccess="onSignIn"></div>
+     <form action = "SNS_joinOk.do" method = "post" name = "join_frm">
+		<div id ="login" class="g-signin2" data-onsuccess="join"></div>
 		<span id="SId"></span> <br>
 		<span id="SName"></span> <br>
 		<span id="SEmail"></span> <br>
 	</form>
+	
+	
 </body>
 </html>

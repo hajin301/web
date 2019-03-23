@@ -31,6 +31,8 @@ public class loginOk implements Service {
 		String id = request.getParameter("id");
 		String pw = request.getParameter("pw");
 		
+		System.out.println(id);
+		
 	    MemberDAO dao = MemberDAO.getInstance();
 	    int checkNum = dao.userCheck(id,  pw);
 	    String json_data = "";

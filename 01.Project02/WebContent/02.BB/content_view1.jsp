@@ -1,13 +1,10 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
-
-<%! String name, id; %>
+  
 <%
-	name = (String)session.getAttribute("name");
-	id = (String)session.getAttribute("id");
+	String name = (String)session.getAttribute("name");
+	String id = (String)session.getAttribute("id");
 %>
-
-
 <!DOCTYPE html>
 <html>
 <head>
@@ -31,28 +28,9 @@ margin:0px auto;
 #name {
 display:none;
 }
-#IdOk{
-display:none;
-}
+
 </style>
 
-<!-- <Script>
-
-$(document).ready(function() {
-	var id = $('#id').val();
-	var idck = $('#idck').val();
-	if(id == idck) {
-		alert(id);
-		alert(idck);
-		alert('1');
-		$('#idOk').css('display','block');
-		$('#idNo').css('display','none');
-	} else {
-		alert(idck);
-		alert('2');
-    }
-});
-</script> -->
 
 </head>
 <body>
@@ -91,46 +69,6 @@ $(document).ready(function() {
 <p>
 <p>	
 	<table width ="800" id="tb" cellpadding="0" cellspacing="0" border="1">
-		<input type="hidden" id="id" value="${content_view.id}">
-		<input type="hidden" id="idck" value="<%=id%>">
-		<script>
-/* 		var id = $('#id').val();
-		var idck = $('#idck').val(); */
-		
-		/* var id = $('#id').val();
-		var idck = $('#idck').val();
-		alert(id);
-		alert(idck); */
-		
-		
-/* 		window.onload = function() {
-			if(id.equals(idck)) {
-				alert('1');
-				$('#idOk').css('display','block');
-				$('#idNo').css('display','none');
-			} else {
-				alert('2');
-				$('#idOk').css('display','none');
-				$('#idNo').css('display','block');
-			}
-		}  */
-		
-		window.onload = function() {
-			var id = $('#id').val();
-			var idck = $('#idck').val();
-			if(id == idck) {
-				alert(id);
-				alert(idck);
-				alert('1');
-				if($('#idOk').css("display")=="none")
-					$('#idOk').show();
-			} else {
-				alert(idck);
-				alert('2');
-		    }
-		}
-		
-		</script>
 		<tr>
 			<td>번호</td>
 			<td>${content_view.bId}</td>
@@ -154,37 +92,11 @@ $(document).ready(function() {
 			</td>
 		</tr>
 		<tr>
-		
-		<Script>
-     /*     function toggle_layer() {
-			var id = $('#id').val();
-			var idck = $('#idck').val();
-			if(id == idck) {
-				alert(id);
-				alert(idck);
-				alert('1');
-				if($('#idOk').css("display")=="none")
-					$('#idOk').show();
-			} else {
-				alert(idck);
-				alert('2');
-		    } */
-		</script>
-		
- 		<td colspan="2" class="toggle_layer">
- 			<div id ="IdOk">	
- 				<a href = "modify_view.do?bId=${content_view.bId}&kind=Bmodify">수정</a> &nbsp;&nbsp;
+			<td colspan="2" id="IdNo">
 				<a href = "list.do?page=<%=session.getAttribute("cpage") %>">목록보기</a> &nbsp;&nbsp;
-				<a href = "delete.do?bId=${content_view.bId}">삭제</a> &nbsp;&nbsp;
 				<a href = "reply_view.do?bId=${content_view.bId}">답변</a>
- 			</div>
- 			<div id ="IdNo">
- 				<a href = "list.do?page=<%=session.getAttribute("cpage") %>">목록보기</a> &nbsp;&nbsp;
-				<a href = "reply_view.do?bId=${content_view.bId}">답변</a>
- 			</div>
- 			
-				
-		</td>  	
+			</td>
+			
 		</tr>
 	</table>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>

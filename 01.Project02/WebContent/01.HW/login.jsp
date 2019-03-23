@@ -1,7 +1,10 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
-<% if(session.getAttribute("ValidMem") != null) { %>
-	<jsp:forward page = "main.jsp"></jsp:forward>
+<% if(session.getAttribute("ValidMem") != null) { 
+
+%>
+	<jsp:forward page = "../01.HW/main.jsp"></jsp:forward> 
+	
 <% } %>
 <!DOCTYPE html>
 <html>
@@ -112,10 +115,12 @@ function submit_ajax() {
 	</div>
 
 	<div class="container test2">
-	<input type = "submit" class="btn btn-primary" value = "   구글계정으로 로그인   " onclick="javascript:window.location = '../01.googlelogin.jsp'"> &nbsp;&nbsp; <p><p>
-	<input type = "submit" class="btn btn-primary" value = "  카카오계정으로 로그인 "> &nbsp;&nbsp; <p>
-	<input type = "submit" class="btn btn-primary" value = "  네이버계정으로 로그인 "> &nbsp;&nbsp; <p>
-    <input type = "submit" class="btn btn-primary" value = "페이스북계정으로 로그인">
+	<form action="SNS_loginOk.do" id="SNS_login_frm" method="post">
+		<input type = "button" class="btn btn-primary" value = "   구글계정으로 로그인   " onclick="javascript:window.location = '../02.googlelogin.jsp'"> &nbsp;&nbsp; <p><p>
+		<input type = "button" class="btn btn-primary" value = "  카카오계정으로 로그인 "> &nbsp;&nbsp; <p>
+		<input type = "button" class="btn btn-primary" value = "  네이버계정으로 로그인 "> &nbsp;&nbsp; <p>
+    	<input type = "button" class="btn btn-primary" value = "페이스북계정으로 로그인">
+    </form>
     </div>
     
  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>

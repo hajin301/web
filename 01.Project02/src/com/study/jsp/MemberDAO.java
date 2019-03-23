@@ -115,14 +115,11 @@ public class MemberDAO {
 			if(set.next()) {
 				dbPw = set.getString("pw");
 				if(dbPw.equals(pw)) {
-					System.out.println("login ok");
 					ri = MemberDAO.MEMBER_LOGIN_SUCCESS; //로그인 ok
 				}else {
-					System.out.println("login fail");
 					ri = MemberDAO.MEMBER_LOGIN_PW_NO_GOOD; // 비밀번호 x
 				}
 			}else {
-				System.out.println("login fail");
 				ri = MemberDAO.MEMBER_LOGIN_IS_NOT; //아이디 X
 			}
 			
@@ -161,14 +158,11 @@ public class MemberDAO {
 			if(set.next()) {
 				eMail = set.getString("email");
 				if(eMail.equals(email)) {
-					System.out.println("login ok");
 					ri = MemberDAO.MEMBER_LOGIN_SUCCESS; //로그인 ok
 				}else {
-					System.out.println("login fail");
-					ri = MemberDAO.MEMBER_LOGIN_PW_NO_GOOD; // 비밀번호 x
+					ri = MemberDAO.MEMBER_LOGIN_PW_NO_GOOD; // 이메일 x
 				}
 			}else {
-				System.out.println("login fail");
 				ri = MemberDAO.MEMBER_LOGIN_IS_NOT; //아이디 X
 			}
 			

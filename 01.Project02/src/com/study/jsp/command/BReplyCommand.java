@@ -18,10 +18,11 @@ public class BReplyCommand implements Service{
 		String bGroup = request.getParameter("bGroup");
 		String bStep = request.getParameter("bStep");
 		String bIndent = request.getParameter("bIndent");
+		String Id = request.getParameter("Id");
 
 		
 		BDao dao = new BDao();
-		dao.reply(bId, bName, bTitle, bContent, bGroup, bStep, bIndent);
+		dao.reply(bId, bName, bTitle, bContent, bGroup, bStep, bIndent, Id);
 		
 	}
 

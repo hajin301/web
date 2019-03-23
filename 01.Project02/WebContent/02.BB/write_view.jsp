@@ -77,14 +77,14 @@ function file_check() {
 	
 }
 
-if(session.getAttribute("ValidMem") == null) {
+/* if(session.getAttribute("ValidMem") == null) {
 	 $('#login1').css('display', 'block');
 	 $('#modify1').css('display', 'none');
 }else{
 	 $('#name').css('display', 'none');
 	 $('#login1').css('display', 'none');
 	 $('#modify1').css('display', 'block');
-}
+} */
 	
 </script>
 
@@ -139,10 +139,12 @@ if(session.getAttribute("ValidMem") == null) {
 		<input type="hidden" name="bId" value="${write_view.bId}">
 		<input type="hidden" name="bGroup" value="${write_view.bGroup}">
 		<input type="hidden" name="bName" value=<%=name %>>
-		
+	    <input type="hidden" name="Id" value="<%=id %>">
+				
 		<tr>
 			<td>이름</td>
-			<td><input type = "text" id="bName" name="bName"  size="50" value=<%=name%>></td>
+			<td><%=name%></td>
+			<%-- <td><input type = "text" id="bName" name="bName"  size="50" value=<%=name%>></td> --%>
 		</tr> 
 		
 		<tr>

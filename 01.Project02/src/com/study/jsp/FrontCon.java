@@ -77,6 +77,7 @@ public class FrontCon extends HttpServlet {
 			else if (command.equals("/01.HW/logout.do")||command.equals("/logout.do")) {
 				logoutOk(request, response);
 			}
+
 		}else if(file.equals("/02.BB/")) {
 			//BBS 시작
 			if(command.equals("/02.BB/write_view.do")||command.equals("/write_view.do")) {
@@ -127,16 +128,13 @@ public class FrontCon extends HttpServlet {
 			if (command.equals("/SNS_joinOk.do")) {
 				Service service = new SNS_joinOk();
 				service.execute(request, response);	
-			}
-			else if (command.equals("/SNS_loginOk.do")) {
+			} else if (command.equals("/SNS_loginOk.do")) {
 				Service service = new SNS_loginOk();
 				service.execute(request, response);	
 			}
 			
 		}
 	}
-	
-	
 	
 	private void logoutOk(HttpServletRequest request, HttpServletResponse response) 
 			throws ServletException, IOException 
