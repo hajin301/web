@@ -1,7 +1,9 @@
 package com.study.jsp.command;
 
+import java.io.IOException;
 import java.util.ArrayList;
 
+import javax.servlet.ServletException;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
@@ -15,6 +17,7 @@ public class BListCommand implements Service {
 	
 	@Override
 	public void execute(HttpServletRequest request, HttpServletResponse response) 
+			throws ServletException, IOException 
 	{
 		int nPage = 1;
 		
@@ -25,7 +28,7 @@ public class BListCommand implements Service {
 		}
 		
 		BDao dao = new BDao();
-		BPageInfo pinfo = dao.articlePage(nPage);
+		BPageInfo pinfo = dao.articlePage(nPage, request);
 		request.setAttribute("page", pinfo);
 		
 		nPage = pinfo.getCurPage();

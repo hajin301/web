@@ -81,12 +81,30 @@ display:none;
   </li>
 </ul>
 
+<script>
+function find_check() {
+	if($('#find_name').val().length == 0){
+		alert("검색어를 입력하세요.");
+		$('#find_name').focus();
+		return;
+	}
+}
+
+</script>
+
 
 <nav class="navbar navbar-light bg-light">
   <a class="navbar-brand">전체보기</a>
-  <form class="form-inline">
-    <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-    <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+  <form action="BSearch.do" method="post" class="form-inline">	
+				<select id="Menu" name="find_field" onchange="MenuList()">
+				        <option value="전체">전체검색</option>
+						<option value="제목" selected="selected">제목</option>
+						<option value="내용">내용</option>
+						<option value ="작성자">작성자</option>
+						<option value="내용+제목">내용+작성자</option>
+				</select> 
+	&nbsp;&nbsp;<input name="find_name" id="find_name" class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">	
+    &nbsp;<button class="btn btn-outline-success my-2 my-sm-0" type="submit" onclick="find_check()">검색</button>
   </form>
 </nav>
 
@@ -94,7 +112,7 @@ display:none;
 	<table class="table table-striped" name="write_frm" width = "700" cellpadding = "0" cellspacing ="0" border="1">
 		<tr>
 			<th scope="col">번호</th>
-			<th scope="col">이름</th>
+			<th scope="col">작성자</th>
 			<th scope="col">제목</th>
 			<th scope="col">날짜</th>
 			<th scope="col">조회수</th>
@@ -102,7 +120,7 @@ display:none;
 		
 		<c:forEach items = "${list }" var = "dto">
 			<tr>
-				<td scope="row">${dto.bId}</td>
+				<td scope="row" >${dto.bId}</td>
 				<td>${dto.bName}</td>
 				<td>
 					<c:forEach begin="1" end="${dto.bIndent}">-</c:forEach> <!--댓글쓰면 들여쓰기 되는 원리 -->
@@ -120,7 +138,7 @@ display:none;
 		</tr>
 		
 		<nav aria-label="page navigation example">
-		<div class="pagination" margin="0px auto">
+		<div class="pagination">
 		<tr>
 			<td colspan="5" >
 			<!-- 처음 -->

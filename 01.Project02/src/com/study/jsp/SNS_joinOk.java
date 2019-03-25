@@ -43,7 +43,7 @@ public class SNS_joinOk implements Service {
 	    	
 	    	json_data = "{\"code\": \"fail\", \"desc\" : \"아이디가 이미 존재 합니다.\" }";
 	    	System.out.println("이미존재하는 아이디");
-	    	response.sendRedirect("./01.HW/login.jsp");
+	    	response.sendRedirect("01.HW/login.jsp");
 	    }else {
 	    	int ri = dao.insertMember(dto);
 	    	if (ri == MemberDAO.MEMBER_JOIN_SUCCESSS) {

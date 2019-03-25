@@ -25,7 +25,6 @@ public class modifyOk implements Service {
     	
     	request.setCharacterEncoding("UTF-8");
     	HttpSession session = request.getSession();
-  	    session = request.getSession();
   	    String id = (String)session.getAttribute("id");
   	    
 		String pw = request.getParameter("pw");

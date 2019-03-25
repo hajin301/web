@@ -14,9 +14,12 @@ import com.study.jsp.command.BContentCommand;
 import com.study.jsp.command.BDeleteCommand;
 import com.study.jsp.command.BListCommand;
 import com.study.jsp.command.BListCommand1;
+import com.study.jsp.command.BListCommand2;
+import com.study.jsp.command.BListCommand3;
 import com.study.jsp.command.BModifyCommand;
 import com.study.jsp.command.BReplyCommand;
 import com.study.jsp.command.BReplyViewCommand;
+import com.study.jsp.command.BSearchCommand;
 import com.study.jsp.command.BWriteCommand;
 
 @WebServlet("*.do")
@@ -105,11 +108,11 @@ public class FrontCon extends HttpServlet {
 				service .execute(request, response);
 				viewPage = "board1.jsp";
 			}else if(command.equals("/02.BB/board2.do")||command.equals("/board2.do")) { 
-				Service service = new BListCommand();
+				Service service = new BListCommand2();
 				service .execute(request, response);
 				viewPage = "board2.jsp";
 			}else if(command.equals("/02.BB/board3.do")||command.equals("/board3.do")) { 
-				Service service = new BListCommand();
+				Service service = new BListCommand3();
 				service .execute(request, response);
 				viewPage = "board3.jsp";
 			}else if(command.equals("/02.BB/content_view.do")||command.equals("/content_view.do")) {
@@ -128,6 +131,10 @@ public class FrontCon extends HttpServlet {
 				Service service = new BDeleteCommand();
 				service.execute(request, response);
 				viewPage = "list.do?page=" + curPage;
+			}else if (command.equals("/02.BB/BSearch.do")||command.equals("/BSearch.do")) {
+				Service service = new BSearchCommand();
+				service.execute(request, response);
+				viewPage = "Search_view.jsp";
 			}else if (command.equals("/02.BB/reply_view.do")||command.equals("/reply_view.do")) {
 				Service service = new BReplyViewCommand();
 				service.execute(request, response);
@@ -162,5 +169,6 @@ public class FrontCon extends HttpServlet {
 		session.invalidate();
 		response.sendRedirect("login.jsp");
 	}
+	
 
 }

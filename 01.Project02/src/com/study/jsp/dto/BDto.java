@@ -117,11 +117,11 @@ public class BDto {
 		this.Id = Id;
 	}
 	
-	public String bMenu() {
+	public String getbMenu() {
 		return bMenu;
 	}
 
-	public void bMenu(String bMenu) {
+	public void setbMenu(String bMenu) {
 		this.bMenu = bMenu;
 	}
 	

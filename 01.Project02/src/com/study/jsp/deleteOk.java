@@ -12,6 +12,10 @@ import com.study.jsp.Service;
 import com.study.jsp.dao.BDao;
 
 public class deleteOk implements Service {
+   
+	public deleteOk() {
+        
+    }
 	
 	@Override
 	public void execute(HttpServletRequest request, HttpServletResponse response)
@@ -36,8 +40,9 @@ public class deleteOk implements Service {
 	    MemberDAO dao = MemberDAO.getInstance();
 		int ri = dao.updateMember(dto);
 		int checkNum = dao.userCheck(id, pw);
-		System.out.println(id);
-		System.out.println(pw);
+		//System.out.println(id);
+		//System.out.println(pw);
+
 		String json_data = "";
 		if(checkNum == MemberDAO.MEMBER_LOGIN_PW_NO_GOOD) {
 			System.out.println("fail");
@@ -45,9 +50,9 @@ public class deleteOk implements Service {
 		}else { 
 	    		System.out.println("delete success");
 	    		dao.deleteOK(id);
-				json_data = "{\"code\" : \"success\", \"desc\" : \"정보가 삭제되었습니다.\"}";
+				json_data = "{\"code\" : \"success\", \"desc\" : \"탈퇴되었습니다.\"}";
+								
 		}
-
 		
 		response.setContentType("application/json); charset=UTF-8");
   	    writer.println(json_data);

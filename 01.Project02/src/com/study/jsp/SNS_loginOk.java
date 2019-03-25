@@ -40,7 +40,7 @@ public class SNS_loginOk implements Service {
 		if(dao.SNS_userCheck(id, email) == MemberDAO.MEMBER_LOGIN_IS_NOT) {
 			System.out.println("일치하는 아이디 없음");
 			json_data = "{\"code\" : \"fail\", \"desc\" : \"아이디가 존재하지 않습니다.\"}";
-			response.sendRedirect("../01.HW/join.jsp");
+			response.sendRedirect("01.HW/join.jsp");
 	    } else if (dao.SNS_userCheck(id,email) == MemberDAO.MEMBER_LOGIN_SUCCESS ){	    	
 	    	  MemberDTO dto = dao.getMember(id);
 	    	  System.out.println("로그인 성공");	
@@ -55,7 +55,7 @@ public class SNS_loginOk implements Service {
 	    		    session.setAttribute("id", id);
 				 	session.setAttribute("name", name);
 				 	session.setAttribute("ValidMem", "yes");
-				 	response.sendRedirect("./01.HW/main.jsp");
+				 	response.sendRedirect("02.BB/list.do?page=1");
 	    	   }
 	    	   response.setContentType("application/json; charset=UTF-8");
 	    	   writer.println(json_data);

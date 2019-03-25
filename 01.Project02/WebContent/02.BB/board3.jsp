@@ -93,16 +93,16 @@ display:none;
 <p>
 	<table class="table table-striped" name="write_frm" width = "700" cellpadding = "0" cellspacing ="0" border="1">
 		<tr>
-			<th scope="col">번호</th>
-			<th scope="col">이름</th>
+			<th scope="col">그룹</th>
+			<th scope="col">작성자</th>
 			<th scope="col">제목</th>
 			<th scope="col">날짜</th>
 			<th scope="col">조회수</th>
 		</tr>
 		
-		<c:forEach items = "${list }" var = "dto">
+		<c:forEach items = "${list3 }" var = "dto">
 			<tr>
-				<td scope="row">${dto.bId}</td>
+				<td scope="row" >자료실</td>
 				<td>${dto.bName}</td>
 				<td>
 					<c:forEach begin="1" end="${dto.bIndent}">-</c:forEach> <!--댓글쓰면 들여쓰기 되는 원리 -->
@@ -129,7 +129,7 @@ display:none;
 					[ &lt;&lt; ]
 				</c:when>
 				<c:otherwise>
-					<a href = "list.do?page=1">[ &lt;&lt; ]</a>
+					<a href = "board3.do?page=1">[ &lt;&lt; ]</a>
 				</c:otherwise>
 			</c:choose>
 			
@@ -139,7 +139,7 @@ display:none;
 					[ &lt;]
 				</c:when>
 				<c:otherwise>
-					<a href="list.do?page=${page.curPage -1 }">[ &lt;]</a>
+					<a href="board3.do?page=${page.curPage -1 }">[ &lt;]</a>
 				</c:otherwise>
 			</c:choose>
 			
@@ -150,7 +150,7 @@ display:none;
 					[${fEach}] &nbsp;
 				</c:when>
 				<c:otherwise>
-					<a href = "list.do?page=${fEach}">[${fEach} ]</a> &nbsp;
+					<a href = "board3.do?page=${fEach}">[${fEach} ]</a> &nbsp;
 				</c:otherwise>
 				</c:choose>
 			</c:forEach>
@@ -161,7 +161,7 @@ display:none;
 				[&gt;]
 			</c:when>
 			<c:otherwise>
-				<a href = "list.do?page=${page.curPage +1 }">[&gt;]</a>
+				<a href = "board3.do?page=${page.curPage +1 }">[&gt;]</a>
 			</c:otherwise>
 			</c:choose>
 			
@@ -171,7 +171,7 @@ display:none;
 				[&gt;&gt;]
 			</c:when>
 			<c:otherwise>
-				<a href = "list.do?page=${page.totalPage}">[&gt;&gt;]</a>
+				<a href = "board3.do?page=${page.totalPage}">[&gt;&gt;]</a>
 			</c:otherwise>
 			</c:choose>
 		</tr>

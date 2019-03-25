@@ -165,7 +165,7 @@ $(function(){
 		<input type="hidden" name="bName" value=<%=name %>>
 	    <input type="hidden" name="Id" value="<%=id %>">				
 		<tr>
-			<td>이름</td>
+			<td>작성자</td>
 			<td><%=name%></td>
 			<%-- <td><input type = "text" id="bName" name="bName"  size="50" value=<%=name%>></td> --%>
 		</tr> 

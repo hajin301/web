@@ -93,8 +93,8 @@ display:none;
 <p>
 	<table class="table table-striped" name="write_frm" width = "700" cellpadding = "0" cellspacing ="0" border="1">
 		<tr>
-			<th scope="col">번호</th>
-			<th scope="col">이름</th>
+			<th scope="col">그룹</th>
+			<th scope="col">작성자</th>
 			<th scope="col">제목</th>
 			<th scope="col">날짜</th>
 			<th scope="col">조회수</th>
@@ -102,7 +102,7 @@ display:none;
 		
 		<c:forEach items = "${list1 }" var = "dto">
 			<tr>
-				<td scope="row">${dto.bId}</td>
+				<td scope="row" style="color:red">공지사항</td>
 				<td>${dto.bName}</td>
 				<td>
 					<c:forEach begin="1" end="${dto.bIndent}">-</c:forEach> <!--댓글쓰면 들여쓰기 되는 원리 -->

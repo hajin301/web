@@ -36,9 +36,8 @@ width: 300px;
  width:400px; background-color:red; border:0px; margin-left:300px;
 }
 
-
 </style>
-<script type="text/javascript">
+<script type="text/Javascript">
 function submit_ajax() {
 		
 	var queryString = $("#login_frm").serialize();	
@@ -51,14 +50,14 @@ function submit_ajax() {
 				//consle.log(json);
 				var result = JSON.parse(json);
 				if(result.code == "success") {
-					alert(result.desc)
-					window.location.replace("main.jsp");
+					alert(result.desc);
+					window.location.replace("../02.BB/list.do?page=1");
 				} else {
 					alert(result.desc);
 				}
 			}
 		});
-	}
+}
 
 </script>
 </head>

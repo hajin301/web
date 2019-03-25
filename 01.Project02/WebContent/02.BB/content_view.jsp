@@ -149,7 +149,7 @@ $(document).ready(function() {
 			<td>${content_view.bHit}</td>
 		</tr>
 		<tr>
-			<td>이름</td>
+			<td>작성자</td>
 			<td>${content_view.bName}</td>
 		</tr>
 		<tr>

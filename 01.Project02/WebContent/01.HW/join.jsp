@@ -32,7 +32,7 @@ margin-top:15px;
 	<!-- kakao -->
 	<meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, width=device-width"/>
     <script src="//developers.kakao.com/sdk/js/kakao.min.js"></script>
-<script>
+<script type="text/JavaScript">
 	
 	function form_check() 
 	{
@@ -72,10 +72,10 @@ margin-top:15px;
 			return;
 		}
 		
-		submit_ajax1();
+		submit_ajax();
 	}
 	
-	function submit_ajax1() {
+	function submit_ajax() {
 		var queryString = $("#join_form").serialize();
 		
 		$.ajax({

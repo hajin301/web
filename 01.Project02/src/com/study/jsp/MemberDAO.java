@@ -264,8 +264,7 @@ public class MemberDAO {
 			con = getConnection();
 			String query = "delete from members where id = ?";
 			pstmt = con.prepareStatement(query);
-			pstmt.setInt(1, Integer.parseInt(id));
-	
+			pstmt.setString(1, id);
 			int rn = pstmt.executeUpdate();
 			
 		} catch (Exception e) {

@@ -105,7 +105,7 @@ function file_check() {
 				<td>${content_view.bHit}</td>
 			</tr>
 			<tr>
-				<td>이름</td>
+				<td>작성자</td>
 				<td><%=name %> </td>
 				<%-- <td> <input type = "text" name = "bName" value="${content_view.bName }"> </td> --%>
 			</tr>

@@ -90,10 +90,12 @@ function submit_ajax1() {
 		dataType: 'text',
 		success: function(json) {
 			//consle.log(json);
-			var result = JSON.parse(json);
+		    var result = JSON.parse(json);
 			if(result.code == "success") {
-				alert(result.desc)
-				window.location.replace("main.jsp");
+				alert(result.desc);				
+				window.location.replace("logout.jsp");
+				
+	
 			} else {
 				alert(result.desc);
 			}
