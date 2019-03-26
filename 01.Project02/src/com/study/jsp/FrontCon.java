@@ -131,7 +131,7 @@ public class FrontCon extends HttpServlet {
 				Service service = new BDeleteCommand();
 				service.execute(request, response);
 				viewPage = "list.do?page=" + curPage;
-			}else if (command.equals("/02.BB/BSearch.do")||command.equals("/BSearch.do")) {
+			}else if (command.equals("/02.BB/Search_view.do")||command.equals("/BSearch.do")) {
 				Service service = new BSearchCommand();
 				service.execute(request, response);
 				viewPage = "Search_view.jsp";

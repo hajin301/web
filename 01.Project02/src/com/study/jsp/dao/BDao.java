@@ -694,26 +694,41 @@ public ArrayList<BDto> list3(int curPage) {
 		
 	}
 	
-	public ArrayList<BDto> BSearch(String find_field, String find_name) 
+	public ArrayList<BDto> BSearch(String find_field, String find_name, int curPage) 
 	{
-		ArrayList<BDto> list = new ArrayList<BDto>();
+		ArrayList<BDto> dtos4 = new ArrayList<BDto>();
 		
 		BDto dto = null;
 		Connection con = null;
 		PreparedStatement pstmt = null;
 		ResultSet resultSet = null;
 		
+		int nStart = (curPage -1 ) * listCount + 1;
+		int nEnd = (curPage -1 ) * listCount + listCount;
+		
 		if(find_field.equals("bTitle")) {
 		
 			try {
 				con = dataSource.getConnection();
 				
-				String query = " select * from mvc_board where btitle like ?";
+				String query = "select * " +
+			               "  from ( " +
+			               "    select rownum num, A.* " +
+			               "      from ( " +
+			               "         select * " +
+			               "            from mvc_board " +
+			               "            where btitle like ? " +
+					       "           order by bGroup desc, bStep asc ) A " +
+			               "       where rownum <= ? ) B " +
+					       "where B.num >= ? ";
+				
 				pstmt = con.prepareStatement(query);
 				pstmt.setString(1,  "%" + find_name + "%");
+				pstmt.setInt(2, nEnd);
+				pstmt.setInt(3, nStart);
 				resultSet = pstmt.executeQuery();
 				
-				if (resultSet.next()) {
+				while (resultSet.next()) {
 					int bId = resultSet.getInt("bId");
 					String bName = resultSet.getString ("bName");
 					String bTitle = resultSet.getString ("bTitle");
@@ -728,6 +743,7 @@ public ArrayList<BDto> list3(int curPage) {
 					
 					dto = new BDto(bId, bName, bTitle, bContent, bDate,
 							       bHit, bGroup, bStep, bIndent, Id, bMenu);
+					dtos4.add(dto);
 				}
 			}catch(Exception e) {
 				e.printStackTrace();
@@ -745,12 +761,28 @@ public ArrayList<BDto> list3(int curPage) {
 			try {
 				con = dataSource.getConnection();
 				
-				String query = " select * from mvc_board where bcontent like ?";
+				String query = /* " select * from mvc_board where bcontent like ?"; */
+				
+				"select * " +
+	               "  from ( " +
+	               "    select rownum num, A.* " +
+	               "      from ( " +
+	               "         select * " +
+	               "            from mvc_board " +
+	               "            where bcontent like ? " +
+			       "           order by bGroup desc, bStep asc ) A " +
+	               "       where rownum <= ? ) B " +
+			       "where B.num >= ? ";
+		
+
+				
 				pstmt = con.prepareStatement(query);
 				pstmt.setString(1,  "%" + find_name + "%");
+				pstmt.setInt(2, nEnd);
+				pstmt.setInt(3, nStart);
 				resultSet = pstmt.executeQuery();
 				
-				if (resultSet.next()) {
+				while (resultSet.next()) {
 					int bId = resultSet.getInt("bId");
 					String bName = resultSet.getString ("bName");
 					String bTitle = resultSet.getString ("bTitle");
@@ -765,6 +797,166 @@ public ArrayList<BDto> list3(int curPage) {
 					
 					dto = new BDto(bId, bName, bTitle, bContent, bDate,
 							       bHit, bGroup, bStep, bIndent, Id, bMenu);
+					dtos4.add(dto);
+				}
+			}catch(Exception e) {
+				e.printStackTrace();
+			}finally {
+				try {
+					if (pstmt != null) pstmt.close();
+					if (con != null) con.close();
+					
+				}catch(Exception e2) {
+					e2.printStackTrace();
+				}
+			}
+			
+		}else if(find_field.equals("total")) {
+			
+			try {
+				con = dataSource.getConnection();
+				
+				String query = /* " select * from mvc_board where bcontent like ?"; */
+				
+				"select * " +
+	               "  from ( " +
+	               "    select rownum num, A.* " +
+	               "      from ( " +
+	               "         select * " +
+	               "            from mvc_board " +
+	               "            where btitle || bname || bcontent like ? " +
+			       "           order by bGroup desc, bStep asc ) A " +
+	               "       where rownum <= ? ) B " +
+			       "where B.num >= ? ";
+		
+				pstmt = con.prepareStatement(query);
+				pstmt.setString(1,  "%" + find_name + "%");
+				pstmt.setInt(2, nEnd);
+				pstmt.setInt(3, nStart);
+				resultSet = pstmt.executeQuery();
+				
+				while (resultSet.next()) {
+					int bId = resultSet.getInt("bId");
+					String bName = resultSet.getString ("bName");
+					String bTitle = resultSet.getString ("bTitle");
+					String bContent = resultSet.getString ("bContent");
+					Timestamp bDate = resultSet.getTimestamp ("bDate");
+					int bHit = resultSet.getInt("bHit");
+					int bGroup = resultSet.getInt("bGroup");
+					int bStep = resultSet.getInt("bStep");
+					int bIndent = resultSet.getInt("bIndent");
+					String Id = resultSet.getString("Id");
+					String bMenu = resultSet.getString("bMenu");
+					
+					dto = new BDto(bId, bName, bTitle, bContent, bDate,
+							       bHit, bGroup, bStep, bIndent, Id, bMenu);
+					dtos4.add(dto);
+				}
+			}catch(Exception e) {
+				e.printStackTrace();
+			}finally {
+				try {
+					if (pstmt != null) pstmt.close();
+					if (con != null) con.close();
+					
+				}catch(Exception e2) {
+					e2.printStackTrace();
+				}
+			}
+			
+		}else if(find_field.equals("bName")) {
+			
+			try {
+				con = dataSource.getConnection();
+				
+				String query = /* " select * from mvc_board where bcontent like ?"; */
+				
+				"select * " +
+	               "  from ( " +
+	               "    select rownum num, A.* " +
+	               "      from ( " +
+	               "         select * " +
+	               "            from mvc_board " +
+	               "            where bname like ? " +
+			       "           order by bGroup desc, bStep asc ) A " +
+	               "       where rownum <= ? ) B " +
+			       "where B.num >= ? ";
+		
+				pstmt = con.prepareStatement(query);
+				pstmt.setString(1,  "%" + find_name + "%");
+				pstmt.setInt(2, nEnd);
+				pstmt.setInt(3, nStart);
+				resultSet = pstmt.executeQuery();
+				
+				while (resultSet.next()) {
+					int bId = resultSet.getInt("bId");
+					String bName = resultSet.getString ("bName");
+					String bTitle = resultSet.getString ("bTitle");
+					String bContent = resultSet.getString ("bContent");
+					Timestamp bDate = resultSet.getTimestamp ("bDate");
+					int bHit = resultSet.getInt("bHit");
+					int bGroup = resultSet.getInt("bGroup");
+					int bStep = resultSet.getInt("bStep");
+					int bIndent = resultSet.getInt("bIndent");
+					String Id = resultSet.getString("Id");
+					String bMenu = resultSet.getString("bMenu");
+					
+					dto = new BDto(bId, bName, bTitle, bContent, bDate,
+							       bHit, bGroup, bStep, bIndent, Id, bMenu);
+					dtos4.add(dto);
+				}
+			}catch(Exception e) {
+				e.printStackTrace();
+			}finally {
+				try {
+					if (pstmt != null) pstmt.close();
+					if (con != null) con.close();
+					
+				}catch(Exception e2) {
+					e2.printStackTrace();
+				}
+			}
+			
+		}else if(find_field.equals("bTitCon")) {
+			
+			try {
+				con = dataSource.getConnection();
+				
+				String query = /* " select * from mvc_board where bcontent like ?"; */
+				
+				"select * " +
+	               "  from ( " +
+	               "    select rownum num, A.* " +
+	               "      from ( " +
+	               "         select * " +
+	               "            from mvc_board " +
+	               "            where btitle || bcontent like ? " +
+			       "           order by bGroup desc, bStep asc ) A " +
+	               "       where rownum <= ? ) B " +
+			       "where B.num >= ? ";
+		
+				pstmt = con.prepareStatement(query);
+				pstmt.setString(1,  "%" + find_name + "%");
+				pstmt.setInt(2, nEnd);
+				pstmt.setInt(3, nStart);
+				resultSet = pstmt.executeQuery();
+				
+				while (resultSet.next()) {
+					int bId = resultSet.getInt("bId");
+					String bName = resultSet.getString ("bName");
+					String bTitle = resultSet.getString ("bTitle");
+					String bContent = resultSet.getString ("bContent");
+					Timestamp bDate = resultSet.getTimestamp ("bDate");
+					int bHit = resultSet.getInt("bHit");
+					int bGroup = resultSet.getInt("bGroup");
+					int bStep = resultSet.getInt("bStep");
+					int bIndent = resultSet.getInt("bIndent");
+					String Id = resultSet.getString("Id");
+					String bMenu = resultSet.getString("bMenu");
+					
+					dto = new BDto(bId, bName, bTitle, bContent, bDate,
+							       bHit, bGroup, bStep, bIndent, Id, bMenu);
+					dtos4.add(dto);
 				}
 			}catch(Exception e) {
 				e.printStackTrace();
@@ -779,7 +971,7 @@ public ArrayList<BDto> list3(int curPage) {
 			}
 			
 		}
-			return list;				
+			return dtos4;				
 	
 	}
 		

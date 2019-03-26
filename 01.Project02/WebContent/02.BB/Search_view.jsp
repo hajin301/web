@@ -83,14 +83,11 @@ display:none;
 
 <script>
 function find_check() {
-	
 	if($('#find_name').val().length == 0){
 		alert("검색어를 입력하세요.");
 		$('#find_name').focus();
 		return;
 	}
-	
-	
 }
 
 </script>
@@ -121,7 +118,7 @@ function find_check() {
 			<th scope="col">조회수</th>
 		</tr>
 		
-		<c:forEach items = "${list }" var = "dto">
+		<c:forEach items = "${BSearch }" var = "dto">
 			<tr>
 				<td scope="row" >${dto.bId}</td>
 				<td>${dto.bName}</td>
@@ -150,7 +147,7 @@ function find_check() {
 					[ &lt;&lt; ]
 				</c:when>
 				<c:otherwise>
-					<a href = "list.do?page=1">[ &lt;&lt; ]</a>
+					<a href = "Search_view.do?page=1">[ &lt;&lt; ]</a>
 				</c:otherwise>
 			</c:choose>
 			
@@ -160,7 +157,7 @@ function find_check() {
 					[ &lt;]
 				</c:when>
 				<c:otherwise>
-					<a href="list.do?page=${page.curPage -1 }">[ &lt;]</a>
+					<a href="Search_view.do?page=${page.curPage -1 }">[ &lt;]</a>
 				</c:otherwise>
 			</c:choose>
 			
@@ -171,7 +168,7 @@ function find_check() {
 					[${fEach}] &nbsp;
 				</c:when>
 				<c:otherwise>
-					<a href = "list.do?page=${fEach}">[${fEach} ]</a> &nbsp;
+					<a href = "Search_view.do?page=${fEach}">[${fEach} ]</a> &nbsp;
 				</c:otherwise>
 				</c:choose>
 			</c:forEach>
@@ -182,7 +179,7 @@ function find_check() {
 				[&gt;]
 			</c:when>
 			<c:otherwise>
-				<a href = "list.do?page=${page.curPage +1 }">[&gt;]</a>
+				<a href = "Search_view.do?page=${page.curPage +1 }">[&gt;]</a>
 			</c:otherwise>
 			</c:choose>
 			
@@ -192,7 +189,7 @@ function find_check() {
 				[&gt;&gt;]
 			</c:when>
 			<c:otherwise>
-				<a href = "list.do?page=${page.totalPage}">[&gt;&gt;]</a>
+				<a href = "Search_view.do?page=${page.totalPage}">[&gt;&gt;]</a>
 			</c:otherwise>
 			</c:choose>
 		</tr>
