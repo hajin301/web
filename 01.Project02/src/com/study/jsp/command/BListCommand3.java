@@ -37,6 +37,7 @@ public class BListCommand3 implements Service {
 		session = request.getSession();
 		session.setAttribute("cpage", nPage);
 		
+		
 		ArrayList<BDto> dtos3 = dao3.list3(nPage);
 		request.setAttribute("list3", dtos3);
 		

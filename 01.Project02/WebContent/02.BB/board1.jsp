@@ -72,12 +72,12 @@ display:none;
   </li>
   <li class="nav-item dropdown">
     <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">게시판</a>
-    <div class="dropdown-menu">
-      <a class="dropdown-item" href="list.do">전체보기</a>
-      <a class="dropdown-item" href="board1.do">공지사항</a>
-      <a class="dropdown-item" href="board2.do">자유게시판</a>
-      <a class="dropdown-item" href="board3.do">자료실</a>
-       </div>
+   <div class="dropdown-menu" name="Menu">
+       <input type="button"  class="dropdown-item" value="전체보기" onclick="javascript:window.location ='list.do'" name="All" >
+       <input type="button" class="dropdown-item" value="공지사항" onclick="javascript:window.location ='board1.do'" name="Noti">
+       <input type="button" class="dropdown-item" Value="자유게시판" onclick="javascript:window.location ='board2.do'" name="Free">
+       <input type="button" class="dropdown-item" value="자료실" onclick="javascript:window.location ='board3.do'" name="Data">        
+    </div>
   </li>
 </ul>
 

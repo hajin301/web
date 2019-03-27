@@ -4,12 +4,14 @@
 if(session.getAttribute("ValidMem") == null) {
 	 /* response.sendRedirect("list.do?page="); */
 	 response.sendRedirect("../01.HW/login.jsp");
+
 %>
 <%
 
 }
 String name = (String)session.getAttribute("name");
 String id = (String)session.getAttribute("id");
+String bMenu = (String)session.getAttribute("bMenu");
 %>
 <!DOCTYPE html>
 <html>
@@ -80,24 +82,11 @@ function file_check() {
 	
 }
 
-/* if(session.getAttribute("ValidMem") == null) {
-	 $('#login1').css('display', 'block');
-	 $('#modify1').css('display', 'none');
-}else{
-	 $('#name').css('display', 'none');
-	 $('#login1').css('display', 'none');
-	 $('#modify1').css('display', 'block');
-} */
 
 </script>
 
 <script language="javascript">
-/* function MenuList() {
- 	var Field = $("#Menu:selected").val();
-	alert(Field); 
-	var sh = document.getElementById("Menu");
-	alert(sh);
-} */ 
+
 $(function(){
 	$(document).ready(function(){
 		$('select[name=Menu]').change(function(){
@@ -174,9 +163,9 @@ $(function(){
 			<td> 
 			<input type="text" id="bMenu" name="bMenu" size="30" value="자유게시판">
 				<select id="Menu" name="Menu" onchange="MenuList()">
-						<option value="공지사항">공지사항</option>
-						<option value ="자유게시판" selected="selected">자유게시판</option>
-						<option value="자료실">자료실</option>
+						<option value="공지사항" name="Noti">공지사항</option>
+						<option value ="자유게시판" selected="selected" name="Free">자유게시판</option>
+						<option value="자료실" name="Data">자료실</option>
 				</select>
 			  </input>
 			</td>
@@ -190,8 +179,10 @@ $(function(){
 			<td> <input type = "text" id="bTitle" name = "bTitle" size = "50"> </td>
 		</tr>
 		<tr>
+		    <form action="fileForm.do" method="post" enctype="multipart/form=data">
 			<td> 파일 </td> 
 			<td><input type = "file" name = "filename" id="bFile"><input type = "button" value = "File Upload" onclick ="file_check()"></td>
+			</form>
 		</tr>
 
 		<tr>

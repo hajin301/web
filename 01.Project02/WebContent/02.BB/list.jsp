@@ -5,6 +5,7 @@
 <%
 String name = (String)session.getAttribute("name");
 String id = (String)session.getAttribute("id");
+String bMenu = (String)session.getAttribute("bMenu");
 %>
 <!DOCTYPE html>
 <html>
@@ -36,32 +37,48 @@ color:black; text-align:right;margin-right:120px;margin-top:10px;
 color:blue;
 }
 
-#name {
-display:none;
-}
 </style>
 
-</head>
-<body>
 <script>
-/* function login_write(){
-	
-	window.location.replace("../01.HW/login.jsp");
-}
- */
+	function doDisplay() {
+		var idck = $('#idck').val();
+		
+		if(idck != NULL) {
+			$('#name').css('display','block');
+			$('#loginOk').css('display','block');
+			$('#loginNo').css('display','none');
+		} 
+	}
 </script>
 
-<div id="name">
-<p><span><%= name %></span> 님 안녕하세요.<p>
+
+</head>
+<body onload="doDisplay()">
+<input type="hidden" id="idck" value="<%=name%>">
+<div id="name" style="display:none">
+	<p><span><%= name %></span> 님 안녕하세요.<p>
 </div>
-<p>
-	<div class="container">
+
+<p> 
+
+    <div class="container" id="loginOk" style="display:none">
+		<div class="row">
+    		<div class="col-sm-8 test1"></div>
+    		<div class="col-sm-4 login" >
+    			<a href="../01.HW/modify.jsp"><span>정보수정</span></a> &nbsp;
+    			<span> / </span> &nbsp;
+				<a href="../01.HW/logout.jsp"><span>로그아웃</span></a>
+    		</div>
+  		</div>
+	</div>
+	
+	<div class="container" id="loginNo">
 		<div class="row">
     		<div class="col-sm-8 test1"></div>
     		<div class="col-sm-4 login">
     			<a href="../01.HW/login.jsp"><span>로그인</span></a> &nbsp;
     			<span> / </span> &nbsp;
-				<a href="../01.HW/logout.jsp"><span>로그아웃</span></a>
+				<a href="../01.HW/logout.jsp"><span>회원가입</span></a>
     		</div>
   		</div>
 	</div>
@@ -72,11 +89,11 @@ display:none;
   </li>
   <li class="nav-item dropdown">
     <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">게시판</a>
-    <div class="dropdown-menu">
-           <a class="dropdown-item" href="list.do">전체보기</a>
-      <a class="dropdown-item" href="board1.do">공지사항</a>
-      <a class="dropdown-item" href="board2.do">자유게시판</a>
-      <a class="dropdown-item" href="board3.do">자료실</a>
+    <div class="dropdown-menu" name="Menu">
+       <input type="button"  class="dropdown-item" value="전체보기" onclick="javascript:window.location ='list.do'" name="All" >
+       <input type="button" class="dropdown-item" value="공지사항" onclick="javascript:window.location ='board1.do'" name="Noti">
+       <input type="button" class="dropdown-item" Value="자유게시판" onclick="javascript:window.location ='board2.do'" name="Free">
+       <input type="button" class="dropdown-item" value="자료실" onclick="javascript:window.location ='board3.do'" name="Data">        
     </div>
   </li>
 </ul>
@@ -96,6 +113,7 @@ function find_check() {
 </script>
 
 
+
 <nav class="navbar navbar-light bg-light">
   <a class="navbar-brand">전체보기</a>
   <form action="Search_view.do" method="post" class="form-inline">	
@@ -112,6 +130,8 @@ function find_check() {
 </nav>
 
 <p>
+		<input type="hidden" id="bMenu" name="bMenu" value=<%=bMenu%>>
+		
 	<table class="table table-striped" name="write_frm" width = "700" cellpadding = "0" cellspacing ="0" border="1">
 		<tr>
 			<th scope="col">번호</th>

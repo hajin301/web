@@ -20,7 +20,7 @@ public class BListCommand2 implements Service {
 			throws ServletException, IOException 
 	{
 		int nPage = 1;
-		
+
 		try {
 			String sPage = request.getParameter("page");
 			nPage = Integer.parseInt(sPage);

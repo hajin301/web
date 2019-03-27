@@ -21,6 +21,7 @@ public class BListCommand implements Service {
 	{
 		int nPage = 1;
 		
+		
 		try {
 			String sPage = request.getParameter("page");
 			nPage = Integer.parseInt(sPage);

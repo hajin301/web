@@ -9,8 +9,12 @@
     	path = request.getRealPath("fileFolder");
     	
     	int size = 1024 * 1024 * 10; //10M
+    	int cnt = 0;
     	String file = "";
-    	String oriFile = "";
+    	String oriFile="";
+    	
+    	String uploadPath = request.getSession().getServletContext().getRealPath(path);
+    	;
     	
     	try {
     		MultipartRequest multi = new MultipartRequest(request, path, size,

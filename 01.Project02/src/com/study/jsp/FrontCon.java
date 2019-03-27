@@ -100,18 +100,22 @@ public class FrontCon extends HttpServlet {
 				service.execute(request, response);
 				viewPage = "list.do";
 			}else if(command.equals("/02.BB/list.do")||command.equals("/list.do")) { 
+				session.setAttribute("Menu", "전체보기");
 				Service service = new BListCommand();
 				service .execute(request, response);
 				viewPage = "list.jsp";
 			}else if(command.equals("/02.BB/board1.do")||command.equals("/board1.do")) { 
+				session.setAttribute("Menu", "공지사항");
 				Service service = new BListCommand1();
 				service .execute(request, response);
 				viewPage = "board1.jsp";
 			}else if(command.equals("/02.BB/board2.do")||command.equals("/board2.do")) { 
+				session.setAttribute("Menu", "자유게시판");
 				Service service = new BListCommand2();
-				service .execute(request, response);
+				service .execute(request, response);	
 				viewPage = "board2.jsp";
 			}else if(command.equals("/02.BB/board3.do")||command.equals("/board3.do")) { 
+				session.setAttribute("Menu", "자료실");
 				Service service = new BListCommand3();
 				service .execute(request, response);
 				viewPage = "board3.jsp";
@@ -143,6 +147,8 @@ public class FrontCon extends HttpServlet {
 				Service service = new BReplyCommand();
 				service.execute(request, response);
 				viewPage = "list.do?page=" + curPage;
+			}else if (command.equals("/02.BB/fileForm.do")||command.equals("/fileForm.do")) {
+				viewPage = "fileFormOK.jsp";
 			}
 	
 			RequestDispatcher dispatcher = request.getRequestDispatcher(viewPage);
