@@ -21,6 +21,7 @@ import com.study.jsp.command.BReplyCommand;
 import com.study.jsp.command.BReplyViewCommand;
 import com.study.jsp.command.BSearchCommand;
 import com.study.jsp.command.BWriteCommand;
+import com.study.jsp.command.BFileCommand;
 
 @WebServlet("*.do")
 public class FrontCon extends HttpServlet {
@@ -136,6 +137,7 @@ public class FrontCon extends HttpServlet {
 				service.execute(request, response);
 				viewPage = "list.do?page=" + curPage;
 			}else if (command.equals("/02.BB/Search_view.do")||command.equals("/BSearch.do")) {
+				session.setAttribute("Menu", "검색");
 				Service service = new BSearchCommand();
 				service.execute(request, response);
 				viewPage = "Search_view.jsp";
@@ -147,8 +149,9 @@ public class FrontCon extends HttpServlet {
 				Service service = new BReplyCommand();
 				service.execute(request, response);
 				viewPage = "list.do?page=" + curPage;
-			}else if (command.equals("/02.BB/fileForm.do")||command.equals("/fileForm.do")) {
-				viewPage = "fileFormOK.jsp";
+			}
+				else if (command.equals("/02.BB/fileFormOk.do")||command.equals("/fileFormOk.do")) {
+				viewPage = "fileFormOk.jsp";
 			}
 	
 			RequestDispatcher dispatcher = request.getRequestDispatcher(viewPage);

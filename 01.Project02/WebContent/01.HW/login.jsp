@@ -29,11 +29,11 @@
 width: 300px;
 }
 .test2{
- margin: 50px
+ margin: 50px; margin:0px auto;
 }
 
 .test2 input{
- width:400px; background-color:red; border:0px; margin-left:300px;
+ width:400px; background-color:red; border:0px;
 }
 
 </style>
@@ -74,7 +74,7 @@ function submit_ajax() {
 
 <ul class="nav nav-pills">
   <li class="nav-item">
-    <a class="nav-link active" href="../03.main/mainpage.jsp">HOME</a>
+    <a class="nav-link active" href="../02.BB/mainpage.jsp">HOME</a>
   </li>
   <li class="nav-item dropdown">
     <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">게시판</a>

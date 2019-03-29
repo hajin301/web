@@ -30,7 +30,7 @@ String bMenu = (String)session.getAttribute("bMenu");
 color:black; text-align:right;margin-right:120px;margin-top:10px;
 }
 #name span {
-color:blue;
+color:white; font-weight:bold;
 }
 #tb {
 margin:0px auto;
@@ -38,6 +38,23 @@ margin:0px auto;
 li {
 none;
 }
+
+#hello{
+background-color:blue; width:100%;
+}
+
+.login {
+color:white;
+
+}
+
+.login span{
+color:white;
+}
+
+.test{
+background-color:#1678CD; width:100%;
+ }
 </style>
 <script>
 function form_check() {
@@ -66,23 +83,40 @@ function file_check() {
 		return;
 	}
 	
-	if($('#bContent').val().length == 0){
-		alert("내용을 입력해 주세요.");
-		$('#bContent').focus();
-		return;
-	}
-	
 	if($('#bFile').val().length == 0){
 		alert("파일을 선택해 주세요.");
 		$('#bFile').focus();
 		return;
 	}
-
-	$("#file_frm").submit();
+	
+	submit_ajax1();
 	
 }
 
-
+function submit_ajax1() {
+	
+	alert("a");
+	var formData = new FormData();
+	formData.append('bFile1', $( '#bFile' )[0].files[0] );
+	alert("b");
+	 
+	$.ajax({
+		url: 'fileFormOk.jsp',
+		type: 'Post',
+		enctype: 'multipart/form-data',
+		data: formData,
+		dataType: "data",
+		processData: false,
+		contentType: false,
+		SUCCESS: function(data) {
+				alert("업로드를 성공했습니다.");
+				window.location.replace("write_view.jsp");
+			},
+		ERROR: function(data) {
+			alert("업로드를 실패했습니다.");
+			}
+	});	
+}
 </script>
 
 <script language="javascript">
@@ -103,6 +137,9 @@ $(function(){
 </head>
 <body>
 
+<div class="container-fluid">
+  		<div class="row">
+  		<div class ="col test">
 <div id="name">
 <p><span><%= name %></span> 님 안녕하세요.<p>
 </div>
@@ -128,10 +165,14 @@ $(function(){
     		</div>
   		</div>
 	</div>
-
+</div>
+</div>
+</div>
+<p>
+<p>
 <ul class="nav nav-pills">
   <li class="nav-item">
-    <a class="nav-link active" href="../03.main/mainpage.jsp">HOME</a>
+    <a class="nav-link active" href="../02.BB/mainpage.jsp">HOME</a>
   </li>
   <li class="nav-item dropdown">
     <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">게시판</a>
@@ -162,7 +203,7 @@ $(function(){
 		 	<td>그룹선택</td>
 			<td> 
 			<input type="text" id="bMenu" name="bMenu" size="30" value="자유게시판">
-				<select id="Menu" name="Menu" onchange="MenuList()">
+				<select id="Menu" name="Menu" >
 						<option value="공지사항" name="Noti">공지사항</option>
 						<option value ="자유게시판" selected="selected" name="Free">자유게시판</option>
 						<option value="자료실" name="Data">자료실</option>
@@ -179,19 +220,13 @@ $(function(){
 			<td> <input type = "text" id="bTitle" name = "bTitle" size = "50"> </td>
 		</tr>
 		<tr>
-		    <form action="fileForm.do" method="post" enctype="multipart/form=data">
-			<td> 파일 </td> 
-			<td><input type = "file" name = "filename" id="bFile"><input type = "button" value = "File Upload" onclick ="file_check()"></td>
-			</form>
-		</tr>
-
-		<tr>
 			<td>내용</td>
 			<td> <textarea id = "bContent" name = "bContent" rows="10" cols="80"> </textarea></td>
 			<script>
-			CKEDITOR.replace('bContent');
+				CKEDITOR.replace('bContent');
 			</script>
 		</tr>
+						
 		<tr>
 			<td colspan = "2">
 				<input type = "button" value = "입력" onclick ="form_check()"> &nbsp;&nbsp;
@@ -199,6 +234,16 @@ $(function(){
 			</td>
 		</tr>
 	</form>
+	
+   <form action = "fileFormOk.do" name="file_frm" id="file_frm" method="post" enctype = "multipart/form-data">
+	   <tr>
+				<td colspan="2"> 
+					<input type = "file" name = "filename" id="bFile">
+					<input type = "button" value = "파일 업로드" onload="file_check()">
+				</td>
+	    </tr>
+	</form> 
+	
 </table>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>	

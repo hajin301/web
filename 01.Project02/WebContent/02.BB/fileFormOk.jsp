@@ -6,16 +6,13 @@
     
     <%! String path; %>
     <%
-    	path = request.getRealPath("fileFolder");
+    	
+        path = request.getRealPath("./fileFolder");
     	
     	int size = 1024 * 1024 * 10; //10M
-    	int cnt = 0;
     	String file = "";
     	String oriFile="";
-    	
-    	String uploadPath = request.getSession().getServletContext().getRealPath(path);
-    	;
-    	
+	
     	try {
     		MultipartRequest multi = new MultipartRequest(request, path, size,
     				                     "UTF-8", new DefaultFileRenamePolicy());
@@ -37,6 +34,7 @@
 <title>Insert title here</title>
 </head>
 <body>
+
 file upload success!
 
 </body>

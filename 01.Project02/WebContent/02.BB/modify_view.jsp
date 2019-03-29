@@ -16,7 +16,7 @@ String id = (String)session.getAttribute("id");
 <head>
 <meta charset="UTF-8">
 <title>Insert title here</title>
-<script type="text/javascript" src="./naver-editor/js/service/HuskyEZCreator.js" charset="utf-8"></script>
+<script src ="https://cdn.ckeditor.com/4.11.3/standard/ckeditor.js"></script>
 <script src="http://code.jquery.com/jquery.js"></script>
  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <!-- Bootstrap CSS -->
@@ -75,7 +75,7 @@ function file_check() {
 
 	<ul class="nav nav-pills">
 	  <li class="nav-item">
-	    <a class="nav-link active" href="../03.main/mainpage.jsp">HOME</a>
+	    <a class="nav-link active" href="../02.BB/mainpage.jsp">HOME</a>
 	  </li>
 	  <li class="nav-item dropdown">
 	    <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">게시판</a>
@@ -132,14 +132,8 @@ function file_check() {
 				<td>내용</td>
 				<td>
 					<textarea name="bContent" id="ir1" rows = "10" cols="100" >${content_view.bContent}</textarea>
-					<script type="text/javascript">
-						var oEditors = [];
-						nhn.husky.EZCreator.createInIFrame({
-    					oAppRef: oEditors,
-    					elPlaceHolder: "ir1",
-    					sSkinURI: "./naver-editor/SmartEditor2Skin.html",
-    					fCreator: "createSEditor2"
-						});
+					<script>
+						CKEDITOR.replace('bContent');
 					</script>
 				</td>
 			</tr>

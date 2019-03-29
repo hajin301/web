@@ -68,7 +68,7 @@ display:none;
 	
 <ul class="nav nav-pills">
   <li class="nav-item">
-    <a class="nav-link active" href="../03.main/mainpage.jsp">HOME</a>
+    <a class="nav-link active" href="../02.BB/mainpage.jsp">HOME</a>
   </li>
   <li class="nav-item dropdown">
     <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">게시판</a>
@@ -96,9 +96,9 @@ function find_check() {
 <nav class="navbar navbar-light bg-light">
   <a class="navbar-brand">전체보기</a>
   <form action="Search_view.do" method="post" class="form-inline">	
-				<select id="Menu" name="find_field" onchange="MenuList()">
+				<select id="Menu" name="find_field">
 				        <option value="total" name="total">전체검색</option>
-						<option value="bTitle" name="bTitle" selected="selected">제목</option>
+						<option value="bTitle" name="bTitle" >제목</option>
 						<option value="bContent" name="bContent">내용</option>
 						<option value ="bName" name="bName">작성자</option>
 						<option value="bTitCon" name="bTitCon">제목+내용</option>
